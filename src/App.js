@@ -4,6 +4,10 @@ import Navbar from "./components/Navbar/Navbar";
 import Header from "./components/Header/Header";
 import Courses from "./components/Courses/Courses";
 import Card from "./components/Card/Card";
+import Categories from "./components/Categories/Categories";
+import Category from "./components/Category/Category";
+import { CardDate } from "./Database/CardData";
+import { CategoryData } from "./Database/CategoryData";
 
 function App() {
   return (
@@ -12,12 +16,15 @@ function App() {
       <div className="container">
         <Header />
         <Courses>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {CardDate.map((card) => (
+            <Card CardData={card} />
+          ))}
         </Courses>
+        <Categories>
+        {CategoryData.map((categoty) => (
+            <Category CategoryDate={categoty} />
+          ))}
+        </Categories>
       </div>
     </div>
   );
