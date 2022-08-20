@@ -1,0 +1,18 @@
+.Head-title {
+    margin-top: 5rem;
+}
+
+.Head-title h1 {
+    /* font-family: 'Playfair Display', serif; */
+    font-family: 'Gelasio', serif;
+}
+
+.Head-title p {
+    margin-bottom: 5px !important;
+}
+.courses {
+    margin-top: 2rem;
+    border: 1px solid var(--clr-gray-1);
+    padding: 20px 20px 20px 3rem;
+    clear: both;
+}
