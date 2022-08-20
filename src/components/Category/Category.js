@@ -8,7 +8,7 @@ export default function Category(props) {
           <a href="#S">
             <img
               src={require(`../../assets/categories/${props.CategoryDate.image}`)}
-              alt="categories"
+              alt={props.CategoryDate.image}
             />
           </a>
         </figure>
