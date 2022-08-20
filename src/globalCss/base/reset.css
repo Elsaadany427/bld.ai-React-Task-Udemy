@@ -1,0 +1,65 @@
+html {
+  box-sizing: border-box;
+  /* Font family */
+
+  /* To make rem units easier to work with (1rem = 10px) */
+  font-size: 62.5%;
+  overflow-wrap: break-word;
+}
+/* Scrollbar Styling for Webkit browsers */
+
+html::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* set body min height 100vh */
+body {
+  min-height: 100vh;
+}
+
+
+/* Links decoration */
+a {
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+a:hover {
+  color: inherit;
+}
+
+/* Remove default list styling */
+ul,
+ol {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img,
+picture,
+svg {
+  height: auto; /* Make sure images are scaled correctly. */
+  max-width: 100%; /* Adhere to container width. */
+  vertical-align: middle;
+  width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+}
