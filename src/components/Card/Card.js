@@ -2,9 +2,13 @@ import React from "react";
 
 export default function Card() {
   return (
+    <div className="col-12 col-sm-4 col-md-4 col-lg-3">
       <div className="course-card">
         <div className="card-img">
-          <img src={require("../../assets/courses/python.jpg")} alt="python course" />
+          <img
+            src={require("../../assets/courses/python.jpg")}
+            alt="python course"
+          />
         </div>
         <h3>
           <a href="#h">Learn Python: The Complete Python Programming Course</a>
@@ -28,5 +32,6 @@ export default function Card() {
           <span> E£679.99 </span>
         </div>
       </div>
+    </div>
   );
 }
