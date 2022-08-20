@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Header from "./components/Header/Header";
 import Courses from "./components/Courses/Courses";
+import Card from "./components/Card/Card";
 
 function App() {
   return (
@@ -10,8 +11,13 @@ function App() {
       <Navbar />
       <div className="container">
         <Header />
-
-        <Courses />
+        <Courses>
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </Courses>
       </div>
     </div>
   );

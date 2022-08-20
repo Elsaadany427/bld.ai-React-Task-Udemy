@@ -8,7 +8,7 @@ export default function Navbar() {
         <div className="navbar__bar-icon navbar__bar-icon--icon-size-sm">
           <i className="fa fa-bars"></i>
         </div>
-        <a href="#" className="navbar__logo">
+        <a href="#x" className="navbar__logo">
           <img
             src={require("../../assets/icons/logo-udemy.svg")}
             alt="logo udemy in mobile"
@@ -17,7 +17,7 @@ export default function Navbar() {
       </div>
       {/* Navbar in web browser */}
       <nav className="navbar__web-content d-flex align-items-center">
-        <a href="#" className="navbar__logo">
+        <a href="#s" className="navbar__logo">
           <img
             src={require("../../assets/icons/logo-udemy.svg")}
             alt="logo udemy in web"
@@ -25,7 +25,7 @@ export default function Navbar() {
         </a>
         <ul className="navbar__list">
           <li className="navbar__categories">
-            <a href="#">
+            <a href="#s">
               <span> Categories </span>
             </a>
           </li>
@@ -39,17 +39,17 @@ export default function Navbar() {
             </form>
           </li>
           <li className="navbar__udemy-business">
-            <a href="#">
+            <a href="#d">
               <span> Udemy Business </span>
             </a>
           </li>
           <li className="navbar__teach-udemy">
-            <a href="#">
+            <a href="#d">
               <span> Teach on Udemy </span>
             </a>
           </li>
           <li className="navbar__auth-buttons d-flex align-items-center">
-            <a href="#" className="navbar__btn--shopping">
+            <a href="#d" className="navbar__btn--shopping">
               <i className="fa-solid fa-cart-shopping"></i>
             </a>
             <button className="btn btn-secondry btn-height">Login</button>
