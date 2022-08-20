@@ -1,0 +1,36 @@
+.course-card {
+  border-radius: 5px;
+  margin-top: 2rem;
+}
+
+.course-card h3 {
+  color: var(--clr-primary);
+}
+
+.course-card .card-img {
+  border: 1px solid var(--clr-gray-2);
+}
+
+.course-card > h3 {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+}
+
+.course-card .card-stars-container {
+  margin-top: 1rem;
+}
+
+.course-card .card-stars i {
+  color: var(--clr-card-stars-container);
+  margin: 2px;
+}
+
+.course-card .card-price {
+  margin-top: 2rem;
+}
+
+.course-card .card-price span {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--clr-primary);
+}
