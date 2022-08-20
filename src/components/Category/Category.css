@@ -1,0 +1,19 @@
+.category-content {
+    max-width: 370px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.category-content figure {
+    transition: transform 100ms cubic-bezier(.2, 0, 1, .9);
+}
+
+.category-content figure:hover {
+    transform: scale(1.05);
+    transition: transform 150ms cubic-bezier(0, 0, .38, .9);
+}
+
+.category-content figcaption {
+    font-size: 1.7rem;
+    font-weight: bold;
+}

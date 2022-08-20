@@ -1,35 +1,35 @@
 import React from "react";
 
-export default function Card() {
+export default function Card(props) {
   return (
-    <div className="col-12 col-sm-4 col-md-4 col-lg-3">
+    <div className="col-12 col-sm-6 col-md-4 col-lg-3">
       <div className="course-card">
         <div className="card-img">
           <img
-            src={require("../../assets/courses/python.jpg")}
-            alt="python course"
+            src={require(`../../assets/courses/${props.CardData.image}`)}
+            alt={props.CardData.image}
           />
         </div>
         <h3>
-          <a href="#h">Learn Python: The Complete Python Programming Course</a>
+          <a href="#h"> { props.CardData.title } </a>
         </h3>
         <div>
-          <span> Avinash Jain, The Codex </span>
+          <span> {props.CardData.auther} </span>
         </div>
         <div className="card-stars-container">
           <span>
-            <span>4.4</span>
+            <span> {props.CardData.starRate} </span>
             <span className="card-stars">
               <i className="fa fa-star"></i>
               <i className="fa fa-star"></i>
               <i className="fa fa-star"></i>
               <i className="fa fa-star-half-o"></i>
             </span>
-            <span>(1.247)</span>
+            <span>({props.CardData.students})</span>
           </span>
         </div>
         <div className="card-price">
-          <span> E£679.99 </span>
+          <span> E£{props.CardData.price} </span>
         </div>
       </div>
     </div>
