@@ -1,10 +1,11 @@
 import "./App.css";
 import React from "react";
-import Card from "./components/Card/Card";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <div className="App">
+      <Navbar />
     </div>
   );
 }
