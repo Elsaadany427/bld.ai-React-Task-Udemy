@@ -21,12 +21,12 @@ function App() {
         <Header />
         <Courses>
           {CardDate.map((card) => (
-            <Card CardData={card} />
+            <Card key={card.id} CardData={card} />
           ))}
         </Courses>
         <Categories>
           {CategoryData.map((categoty) => (
-            <Category CategoryDate={categoty} />
+            <Category key={categoty.id} CategoryDate={categoty} />
           ))}
         </Categories>
       </div>
