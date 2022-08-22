@@ -73,11 +73,12 @@
     margin-left: 10px;
   }
   
-  .navbar__search-form > form > svg {
+  .navbar__search-form > form > .search-icon {
     width: 20px;
+    font-size: 1.5rem;
     position: absolute;
     left: 16px;
-    fill: var(--clr-gray-1);
+    color: var(--clr-gray-1);
   }
   
   /* lg down */
