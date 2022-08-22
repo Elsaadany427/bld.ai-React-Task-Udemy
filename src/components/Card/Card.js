@@ -7,7 +7,7 @@ export default function Card(props) {
       <div className="course-card">
         <div className="card-img">
           <img
-            src={require(`../../assets/courses/${image}`)}
+            src={`/courses/${image}`}
             alt={image}
           />
         </div>
