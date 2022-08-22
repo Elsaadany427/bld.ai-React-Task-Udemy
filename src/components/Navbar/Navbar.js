@@ -1,5 +1,7 @@
 import React from "react";
 import UdemyLogo from '../../assets/icons/logo-udemy.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 export default function Navbar() {
   return (
@@ -34,7 +36,7 @@ export default function Navbar() {
             <form className="d-flex align-items-center">
               <input type="text" placeholder="Search for anything" />
               <button className="btn btn-dark btn-height">Search</button>
-              <i class="fa fa-search" aria-hidden="true"></i>
+              <FontAwesomeIcon  className="search-icon" icon={faSearch} />
             </form>
           </li>
           <li className="navbar__udemy-business">
