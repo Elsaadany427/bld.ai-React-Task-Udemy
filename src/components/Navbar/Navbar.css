@@ -73,11 +73,11 @@
     margin-left: 10px;
   }
   
-  .navbar__search-form > form > svg {
-    width: 20px;
+  .navbar__search-form > form > i {
+    font-size: 20px;
     position: absolute;
     left: 16px;
-    fill: var(--clr-gray-1);
+    color: var(--clr-gray-1);
   }
   
   /* lg down */
