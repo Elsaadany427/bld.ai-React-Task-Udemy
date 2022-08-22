@@ -1,4 +1,5 @@
 import React from "react";
+import UdemyLogo from '../../assets/icons/logo-udemy.svg';
 
 export default function Navbar() {
   return (
@@ -10,7 +11,7 @@ export default function Navbar() {
         </div>
         <a href="#x" className="navbar__logo">
           <img
-            src={require("../../assets/icons/logo-udemy.svg")}
+            src={UdemyLogo}
             alt="logo udemy in mobile"
           />
         </a>
@@ -19,7 +20,7 @@ export default function Navbar() {
       <nav className="navbar__web-content d-flex align-items-center">
         <a href="#s" className="navbar__logo">
           <img
-            src={require("../../assets/icons/logo-udemy.svg")}
+             src={UdemyLogo}
             alt="logo udemy in web"
           />
         </a>
