@@ -6,12 +6,8 @@ import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Header from "./components/Header/Header";
 import Courses from "./components/Courses/Courses";
-import Card from "./components/Card/Card";
 import Categories from "./components/Categories/Categories";
-import Category from "./components/Category/Category";
-// Database objects
-import { CardDate } from "./Database/CardData";
-import { CategoryData } from "./Database/CategoryData";
+
 
 function App() {
   return (
@@ -20,14 +16,8 @@ function App() {
       <div className="container">
         <Header />
         <Courses>
-          {CardDate.map((card) => (
-            <Card key={card.id} CardData={card} />
-          ))}
         </Courses>
         <Categories>
-          {CategoryData.map((categoty) => (
-            <Category key={categoty.id} CategoryDate={categoty} />
-          ))}
         </Categories>
       </div>
     </div>
