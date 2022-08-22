@@ -1,7 +1,7 @@
 export const CategoryData = [
     {
         id: 1,
-        cccc: "Design",
+        name: "Design",
         image: "lohp-category-design-v2.jpg"
     },
     {
