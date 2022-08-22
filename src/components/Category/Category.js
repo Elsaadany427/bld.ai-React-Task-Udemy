@@ -8,7 +8,7 @@ export default function Category(props) {
         <figure>
           <a href="#S">
             <img
-              src={require(`../../assets/categories/${image}`)}
+              src={`/categories/${image}`}
               alt={image}
             />
           </a>
