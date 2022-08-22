@@ -1,5 +1,6 @@
 import React from "react";
-// import PropTypes from "prop-types";
+import Card from "../Card/Card";
+import { CardDate } from "../../Database/CardData";
 
 export default function Courses(props) {
   return (
@@ -13,7 +14,11 @@ export default function Courses(props) {
         </p>
       </div>
       <div className="container courses">
-        <div className="row">{props.children}</div>
+        <div className="row">
+          {CardDate.map((card) => (
+            <Card key={card.id} CardData={card} />
+          ))}
+        </div>
       </div>
     </>
   );
