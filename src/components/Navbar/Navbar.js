@@ -12,12 +12,12 @@ export default function Navbar() {
         <div className="navbar__bar-icon navbar__bar-icon--icon-size-sm">
           <i className="fa fa-bars" onClick={() => setIsOpen(!open)}></i>
         </div>
-        <a href="#x" className="navbar__logo">
+        <a href="/" className="navbar__logo">
           <img src={UdemyLogo} alt="logo udemy in mobile" />
         </a>
         <ul className={`navbar__mobile-list ${open && "open"}`}>
           <li className="navbar__mobile-home">
-            <a href="#s">
+            <a href="/">
               <span> Home </span>
             </a>
           </li>
@@ -26,7 +26,7 @@ export default function Navbar() {
       </div>
       {/* Navbar in web browser */}
       <nav className="navbar__web-content d-flex align-items-center">
-        <a href="#s" className="navbar__logo">
+        <a href="/" className="navbar__logo">
           <img src={UdemyLogo} alt="logo udemy in web" />
         </a>
         <ul className="navbar__list">
