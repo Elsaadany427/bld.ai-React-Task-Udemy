@@ -1,30 +1,33 @@
-import React from "react";
-import UdemyLogo from '../../assets/icons/logo-udemy.svg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import React, { useState } from "react";
+import UdemyLogo from "../../assets/icons/logo-udemy.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
+  const [open, setIsOpen] = useState(false);
   return (
     <div className="navbar flex-space-column">
       {/* Navbar in mobile */}
       <div className="navbar__mobile flex-center-vert">
         <div className="navbar__bar-icon navbar__bar-icon--icon-size-sm">
-          <i className="fa fa-bars"></i>
+          <i className="fa fa-bars" onClick={() => setIsOpen(!open)}></i>
         </div>
         <a href="#x" className="navbar__logo">
-          <img
-            src={UdemyLogo}
-            alt="logo udemy in mobile"
-          />
+          <img src={UdemyLogo} alt="logo udemy in mobile" />
         </a>
+        <ul className={`navbar__mobile-list ${open && "open"}`}>
+          <li className="navbar__mobile-home">
+            <a href="#s">
+              <span> Home </span>
+            </a>
+          </li>
+          <hr />
+        </ul>
       </div>
       {/* Navbar in web browser */}
       <nav className="navbar__web-content d-flex align-items-center">
         <a href="#s" className="navbar__logo">
-          <img
-             src={UdemyLogo}
-            alt="logo udemy in web"
-          />
+          <img src={UdemyLogo} alt="logo udemy in web" />
         </a>
         <ul className="navbar__list">
           <li className="navbar__categories">
@@ -36,7 +39,7 @@ export default function Navbar() {
             <form className="d-flex align-items-center">
               <input type="text" placeholder="Search for anything" />
               <button className="btn btn-dark btn-height">Search</button>
-              <FontAwesomeIcon  className="search-icon" icon={faSearch} />
+              <FontAwesomeIcon className="search-icon" icon={faSearch} />
             </form>
           </li>
           <li className="navbar__udemy-business">
