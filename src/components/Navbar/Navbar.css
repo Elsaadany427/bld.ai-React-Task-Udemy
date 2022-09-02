@@ -151,6 +151,7 @@
   transform: translateX(-100%);
   transition: all .45s ease-in-out;
 }
+
 .navbar__mobile-list.open {
   transform: translateX(0%);
 }
@@ -164,6 +165,7 @@
   display: none;
   padding: 1.2rem;
 }
+
 
 .navbar__bar-icon>i {
   font-size: 2.4rem;
