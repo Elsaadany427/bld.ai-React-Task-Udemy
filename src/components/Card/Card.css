@@ -1,3 +1,8 @@
+.card-item {
+  /* width: 249px; */
+  margin-right: 10px;
+}
+
 .course-card {
   border-radius: 5px;
   margin-top: 2rem;
@@ -11,7 +16,7 @@
   border: 1px solid var(--clr-gray-2);
 }
 
-.course-card > h3 {
+.course-card>h3 {
   font-size: 1.6rem;
   margin-top: 1rem;
 }
@@ -33,4 +38,52 @@
   font-weight: bold;
   font-size: 1.5rem;
   color: var(--clr-primary);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  background-color: var(--clr-primary) !important;
+  margin-top: calc(0px - (44px/ 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-secondry);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-family: swiper-icons;
+  font-size: 22px;
+  text-transform: none !important;
+  letter-spacing: 0;
+  text-transform: none;
+  font-variant: initial;
+  line-height: 1;
+}
+
+.swiper-button-next {
+  right: 10px;
+  left: auto;
+}
+
+.swiper-button-prev {
+  left: 10px;
+  right: auto;
+}
+
+.swiper-button-next::after {
+  content: 'next';
+
+}
+
+.swiper-button-prev::after {
+  content: 'prev';
+
 }
