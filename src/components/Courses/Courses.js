@@ -13,20 +13,19 @@ import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 
 export default function Courses(props) {
   const [Tabs, setTabs] = useState([]);
+  const [courses, setCourses] = useState([]);
   const [currentTab, setcurrentTab] = useState({
     tabName: "",
     opportunities: "",
     desc: "",
   });
-  const [courses, setCourses] = useState([]);
-
+  
   useEffect(() => {
     // Fetch tabs
     fetch("https://62f965f63eab3503d1e45e85.mockapi.io/tabs")
       .then((data) => data.json())
       .then((data) => {
         setTabs(data[0]);
-       
       })
       .catch((err) => {
         console.log(err);
@@ -64,9 +63,9 @@ export default function Courses(props) {
           <ul className="cources-list">
             {Object.keys(Tabs).map((tab, index) => (
               <li
-                className={`cources-item ${index === 0 && "active"}`}
+                className={`cources-item ${currentTab.tabName === tab ? "active" : ''}`}
                 key={tab}
-                onClick={() => handleCourses(tab) }
+                onClick={() => handleCourses(tab)}
               >
                 <a href={`#${tab}`}>{tab}</a>
               </li>
