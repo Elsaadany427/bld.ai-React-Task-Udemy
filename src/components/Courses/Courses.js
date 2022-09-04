@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Card from "../Card/Card";
-
+import axios from "axios";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -19,13 +19,13 @@ export default function Courses(props) {
     opportunities: "",
     desc: "",
   });
-  
+
   useEffect(() => {
     // Fetch tabs
-    fetch("https://62f965f63eab3503d1e45e85.mockapi.io/tabs")
-      .then((data) => data.json())
+    axios
+      .get("https://62f965f63eab3503d1e45e85.mockapi.io/tabs")
       .then((data) => {
-        setTabs(data[0]);
+        setTabs(data.data[0]);
       })
       .catch((err) => {
         console.log(err);
@@ -33,15 +33,17 @@ export default function Courses(props) {
   }, []);
 
   function handleCourses(tab) {
-    fetch(`https://62f965f63eab3503d1e45e85.mockapi.io/courses?category=${tab}`)
-      .then((data) => data.json())
+    axios
+      .get(
+        `https://62f965f63eab3503d1e45e85.mockapi.io/courses?category=${tab}`
+      )
       .then((data) => {
         setcurrentTab({
           tabName: tab,
           opportunities: Tabs[tab].opportunities,
           desc: Tabs[tab].desc,
         });
-        setCourses(data);
+        setCourses(data.data);
       })
       .catch((err) => {
         console.log(err);
@@ -61,9 +63,11 @@ export default function Courses(props) {
       <div className="cources-tab">
         <nav className="cources-nav">
           <ul className="cources-list">
-            {Object.keys(Tabs).map((tab, index) => (
+            {Object.keys(Tabs).map(tab => (
               <li
-                className={`cources-item ${currentTab.tabName === tab ? "active" : ''}`}
+                className={`cources-item ${
+                  currentTab.tabName === tab ? "active" : ""
+                }`}
                 key={tab}
                 onClick={() => handleCourses(tab)}
               >
