@@ -1,11 +1,65 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import Card from "../Card/Card";
-import { CardDate } from "../../Database/CardData";
+import axios from "axios";
+import { SwiperSlide } from "swiper/react";
+import "swiper/swiper.min.css";
+import PlaceholderCard from "../PlaceholderCard/PlaceholderCard";
+import CustemSwiper from "../Swiper/Swiper";
 
 export default function Courses(props) {
+  const [loading, setLoading] = useState(true);
+  const [Tabs, setTabs] = useState({});
+  const [courses, setCourses] = useState([]);
+  const [currentTab, setcurrentTab] = useState({
+    tabName: "",
+    opportunities: "",
+    desc: "",
+  });
+  const placeholder = [1, 2, 3, 4, 5];
+
+  useEffect(() => {
+    // Fetch tabs
+    axios
+      .get("https://62f965f63eab3503d1e45e85.mockapi.io/tabs")
+      .then((data) => {
+        setTabs(data.data[0]);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  // Fetch defult Tab
+  useEffect(() => {
+    if (Tabs[Object.keys(Tabs)[0]]) handleCourses(Object.keys(Tabs)[0]);
+  }, [Tabs]);
+
+  function handleCourses(tab) {
+    setLoading(true);
+    axios
+      .get(
+        `https://62f965f63eab3503d1e45e85.mockapi.io/courses?category=${tab}`
+      )
+      .then((data) => {
+        setTimeout(() => {
+          setLoading(false);
+        }, 500);
+
+        setcurrentTab({
+          tabName: tab,
+          opportunities: Tabs[tab].opportunities,
+          desc: Tabs[tab].desc,
+        });
+        setCourses(data.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
   return (
     <>
-      {/* Main content -- Heading title */}
+      {/* Heading title */}
       <div className="Head-title">
         <h1>A broad selection of courses</h1>
         <p>
@@ -13,11 +67,71 @@ export default function Courses(props) {
           every month
         </p>
       </div>
+      <div className="cources-tab">
+        <nav className="cources-nav">
+          <ul className="cources-list">
+            {Object.keys(Tabs).map((tab) => (
+              <li
+                className={`cources-item ${
+                  currentTab.tabName === tab ? "active" : ""
+                }`}
+                key={tab}
+                onClick={() => handleCourses(tab)}
+              >
+                <a href={`#${tab}`}>{tab}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
       <div className="container courses">
-        <div className="row">
-          {CardDate.map((card) => (
-            <Card key={card.id} CardData={card} />
-          ))}
+        <div className="main-content__course-desc">
+          {loading ? (
+            <>
+              <p aria-hidden="true">
+                <span className="placeholder col-6"></span>
+              </p>
+              <a
+                href="#"
+                tabIndex="-1"
+                className="btn btn-primary disabled placeholder col-4"
+                aria-hidden="true"
+              ></a>
+            </>
+          ) : (
+            <>
+              <h2> {currentTab.opportunities} </h2>
+              <p>{currentTab.desc}</p>
+              <button className="btn btn-secondry btn-height">
+                Explore {currentTab.tabName}
+              </button>
+            </>
+          )}
+        </div>
+        <div
+          className="row"
+          style={{
+            clear: "both",
+            position: "relative",
+          }}
+        >
+          {loading ? (
+            <CustemSwiper>
+              {placeholder.map((item) => (
+                <SwiperSlide key={item}>
+                  <PlaceholderCard />
+                </SwiperSlide>
+              ))}
+            </CustemSwiper>
+          ) : (
+            <CustemSwiper>
+              {courses.map((card) => (
+                <SwiperSlide key={card.id}>
+                  <Card key={card.id} CardData={card} />
+                </SwiperSlide>
+              ))}
+            </CustemSwiper>
+          )}
         </div>
       </div>
     </>
