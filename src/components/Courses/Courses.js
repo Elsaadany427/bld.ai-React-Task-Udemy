@@ -2,14 +2,10 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Card from "../Card/Card";
 import axios from "axios";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
+import { SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
-
-// import required modules
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
+import PlaceholderCard from "../PlaceholderCard/PlaceholderCard";
+import CustemSwiper from "../Swiper/Swiper";
 
 export default function Courses(props) {
   const [loading, setLoading] = useState(true);
@@ -20,6 +16,7 @@ export default function Courses(props) {
     opportunities: "",
     desc: "",
   });
+  const placeholder = [1, 2, 3, 4, 5];
 
   useEffect(() => {
     // Fetch tabs
@@ -33,18 +30,22 @@ export default function Courses(props) {
       });
   }, []);
 
+  // Fetch defult Tab
   useEffect(() => {
-    if(Tabs[Object.keys(Tabs)[0]])
-      handleCourses(Object.keys(Tabs)[0]);
-      setLoading(false);
-  }, [Tabs])
+    if (Tabs[Object.keys(Tabs)[0]]) handleCourses(Object.keys(Tabs)[0]);
+  }, [Tabs]);
 
   function handleCourses(tab) {
+    setLoading(true);
     axios
       .get(
         `https://62f965f63eab3503d1e45e85.mockapi.io/courses?category=${tab}`
       )
       .then((data) => {
+        setTimeout(() => {
+          setLoading(false);
+        }, 500);
+
         setcurrentTab({
           tabName: tab,
           opportunities: Tabs[tab].opportunities,
@@ -56,7 +57,6 @@ export default function Courses(props) {
         console.log(err);
       });
   }
-
   return (
     <>
       {/* Heading title */}
@@ -86,48 +86,52 @@ export default function Courses(props) {
       </div>
       <div className="container courses">
         <div className="main-content__course-desc">
-          <h2> {currentTab.opportunities} </h2>
-          <p>{currentTab.desc}</p>
-          <button className="btn btn-secondry btn-height">
-            Explore {currentTab.tabName}
-          </button>
+          {loading ? (
+            <>
+              <p aria-hidden="true">
+                <span className="placeholder col-6"></span>
+              </p>
+              <a
+                href="#"
+                tabIndex="-1"
+                className="btn btn-primary disabled placeholder col-4"
+                aria-hidden="true"
+              ></a>
+            </>
+          ) : (
+            <>
+              <h2> {currentTab.opportunities} </h2>
+              <p>{currentTab.desc}</p>
+              <button className="btn btn-secondry btn-height">
+                Explore {currentTab.tabName}
+              </button>
+            </>
+          )}
         </div>
-
-        <div className="row" style={{ clear: "both" }}>
-          <Swiper
-            navigation={true}
-            mousewheel={true}
-            keyboard={true}
-            modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-            spaceBetween={20}
-            slidesPerView={1}
-            pagination={{
-              clickable: true,
-            }}
-            // modules={[Pagination]}
-            breakpoints={{
-              // when window width is >= 640px
-              640: {
-                width: 240,
-                slidesPerView: 1,
-              },
-              // when window width is >= 768px
-              768: {
-                width: 568,
-                slidesPerView: 2,
-              },
-            }}
-            id="main"
-            width="280"
-          >
-            {/* <div class="swiper-wrapper"> */}
-            {courses.map((card) => (
-              <SwiperSlide key={card.id}>
-                <Card key={card.id} CardData={card} />
-              </SwiperSlide>
-            ))}
-            {/* </div> */}
-          </Swiper>
+        <div
+          className="row"
+          style={{
+            clear: "both",
+            position: "relative",
+          }}
+        >
+          {loading ? (
+            <CustemSwiper>
+              {placeholder.map((item) => (
+                <SwiperSlide key={item}>
+                  <PlaceholderCard />
+                </SwiperSlide>
+              ))}
+            </CustemSwiper>
+          ) : (
+            <CustemSwiper>
+              {courses.map((card) => (
+                <SwiperSlide key={card.id}>
+                  <Card key={card.id} CardData={card} />
+                </SwiperSlide>
+              ))}
+            </CustemSwiper>
+          )}
         </div>
       </div>
     </>

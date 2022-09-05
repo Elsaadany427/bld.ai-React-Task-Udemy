@@ -16,6 +16,7 @@
     border: 1px solid var(--clr-gray-1);
     padding: 20px 20px 20px 3rem;
     clear: both;
+    position: relative;
 }
 
 /* Courses Tabs */
@@ -41,4 +42,15 @@
 
 .cources-tab .cources-nav ul li.active a {
     color: var(--clr-primary);
+}
+
+.spinner-grow {
+    width: 50px !important;
+    height: 50px !important;
+    border-color: rgb(51, 51, 51);
+    border-width: 2px;
+    top: 26%;
+    position: absolute;
+    left: 50%;
+    z-index: 11;
 }
