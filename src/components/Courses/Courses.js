@@ -12,7 +12,8 @@ import "swiper/swiper.min.css";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 
 export default function Courses(props) {
-  const [Tabs, setTabs] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [Tabs, setTabs] = useState({});
   const [courses, setCourses] = useState([]);
   const [currentTab, setcurrentTab] = useState({
     tabName: "",
@@ -31,6 +32,12 @@ export default function Courses(props) {
         console.log(err);
       });
   }, []);
+
+  useEffect(() => {
+    if(Tabs[Object.keys(Tabs)[0]])
+      handleCourses(Object.keys(Tabs)[0]);
+      setLoading(false);
+  }, [Tabs])
 
   function handleCourses(tab) {
     axios
@@ -63,7 +70,7 @@ export default function Courses(props) {
       <div className="cources-tab">
         <nav className="cources-nav">
           <ul className="cources-list">
-            {Object.keys(Tabs).map(tab => (
+            {Object.keys(Tabs).map((tab) => (
               <li
                 className={`cources-item ${
                   currentTab.tabName === tab ? "active" : ""
