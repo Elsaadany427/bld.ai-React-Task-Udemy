@@ -22,6 +22,7 @@ export default function Courses(props) {
   const [searchParams, setSearchParams] = useSearchParams();
   const search = searchParams.get("search");
 
+  
   // Reset Params based on search
   useEffect(() => {
     const param = searchParams.get("search");
