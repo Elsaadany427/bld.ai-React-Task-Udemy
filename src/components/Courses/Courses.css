@@ -28,7 +28,7 @@
 
 /* Tabs nav */
 
-.cources-tab .cources-nav ul li a {
+.cources-tab .cources-nav ul li span {
     font-weight: bold;
     cursor: pointer;
     float: left;
@@ -40,7 +40,7 @@
     margin-bottom: 0.6rem;
 }
 
-.cources-tab .cources-nav ul li.active a {
+.cources-tab .cources-nav ul li.active span {
     color: var(--clr-primary);
 }
 
