@@ -12,8 +12,8 @@ import Course from "./pages/Course";
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <Router>
+        <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/courses" element={<Course />} />

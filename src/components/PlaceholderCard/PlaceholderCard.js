@@ -17,7 +17,7 @@ export default function PlaceholderCard() {
           <span className="placeholder col-4"></span>
           <span className="placeholder col-4"></span>
         </p>
-        <a href="#s" className="btn disabled placeholder col-6"></a>
+        <a href="#s" className="btn disabled placeholder col-6" aria-label="btn" > </a>
       </div>
     </div>
   );
