@@ -5,7 +5,7 @@ export default function Learn() {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-md-8">
+        <div className="col-md-7">
           <div className="learn">
             <h2 className="learn-title mb-4">What you'll learn</h2>
             <ul className="learn-list">
