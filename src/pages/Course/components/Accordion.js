@@ -7,8 +7,8 @@ export default function Accordion() {
     setHidden(!hidden);
   };
   return (
-    <div className="container">
-      <div className="row mt-5">
+    <div className="container component-margin ">
+      <div className="row">
         <div className="col-md-7">
           <h2>Course content</h2>
         </div>
