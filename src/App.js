@@ -7,7 +7,7 @@ import React from "react";
 // Components
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home";
-import Course from "./pages/Course";
+import Course from "./pages/Course/Course"
 
 function App() {
   return (

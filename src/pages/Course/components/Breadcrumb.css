@@ -1,0 +1,7 @@
+.breadcrumb-item {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.breadcrumb-item a {
+    text-decoration: none !important;
+}

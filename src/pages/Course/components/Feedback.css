@@ -1,0 +1,9 @@
+.feedback-rate {
+    color: var(--clr-card-stars-container)
+}
+.progress-bar {
+    background-color: var(--clr-gray-2);
+}
+.feedback-progress-bar span i {
+    margin-right: 0.4rem;
+}
