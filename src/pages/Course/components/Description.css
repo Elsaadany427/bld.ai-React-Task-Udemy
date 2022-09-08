@@ -1,0 +1,7 @@
+.showMore {
+    color: var(--clr-spectrum);
+}
+
+.description-content {
+    font-size: clamp(1.62rem, calc(1.52rem + 0.49vw), 0.95rem)
+}

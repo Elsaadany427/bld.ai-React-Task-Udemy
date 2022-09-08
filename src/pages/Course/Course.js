@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Learn from "./components/Learn";
 import Accordion from "./components/Accordion";
 import Requirements from "./components/Requirements";
+import Description from "./components/Description";
 
 export default function Course() {
   return (
@@ -13,6 +14,7 @@ export default function Course() {
           <Learn />
           <Accordion />
           <Requirements />
+          <Description />
         </div>
       </section>
     </>
