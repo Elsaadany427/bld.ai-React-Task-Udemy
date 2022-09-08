@@ -16,9 +16,9 @@
 - [x] Fetched date from a Mock Api
 - [x] While the courses data is loading a loading spinner should shown in place of the courses
 ## Navigation bar search function:
-- [ ] The search function should be active but this time it should use the URL
-- [ ] When the user searches a course name and clicks search → the search term is stored in the `search query` in the url
-- [ ] The courses get filtered automatically based on the search query
+- [x] The search function should be active but this time it should use the URL
+- [x] When the user searches a course name and clicks search → the search term is stored in the `search query` in the url
+- [x] The courses get filtered automatically based on the search query
 - [ ] If the user used the search function while in the single course page .. the app should navigate back to the home page and show the filtered courses.
 ## Single course page:
 - [ ] On clicking on any course’s card its page should be open
