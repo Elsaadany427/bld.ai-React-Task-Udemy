@@ -1,0 +1,19 @@
+.instructors-role {
+    font-size: clamp(1.62rem, calc(1.52rem + 0.49vw), 0.95rem);
+    color: var(--clr-gray-2);
+}
+.card {
+    border: none;
+}
+.card img {
+    border-radius: 50%;
+}
+.card-body i {
+    font-size: 1.4rem;
+}
+.card-body span {
+    font-weight: bold;
+}
+.instructors-desc {
+    font-size: clamp(1.62rem, calc(1.52rem + 0.49vw), 0.95rem)
+}
