@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import "./Review.css";
+import { CourseContext } from "../../../State/courseContext";
 
 export default function Review() {
+  const [hideSeeMore, sethideSeeMore] = useState(false);
+  const course = useContext(CourseContext);
+  const defaultReviewer = [];
+  const hiddenReviewer = [];
+
+  for (let i = 0; i < Math.min(5, course.reviews.length); i++) {
+    defaultReviewer.push(course.reviews[i]);
+  }
+
+  for (
+    let i = Math.min(5, course.reviews.length);
+    i < course.reviews.length;
+    i++
+  ) {
+    hiddenReviewer.push(course.reviews[i]);
+  }
+
+  // To handle see more
+  const handleClick = () => {
+    sethideSeeMore(!hideSeeMore);
+  };
+
   return (
     <div className="container component-margin review">
       <div className="row">
@@ -26,233 +49,94 @@ export default function Review() {
               </form>
             </div>
           </div>
-          <div className="row mt-5">
-            <div className="col-1">
-              <div className="review-img">
-                <span> M </span>
-              </div>
-            </div>
-            <div className="col-9 mt-2">
-              <h3 className="review-auther-name">Asif H.</h3>
-              <span className="review-stars">
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star-half-o" aria-hidden="true"></i>
-              </span>
-              <span className="ms-1"> 2 weeks ago </span>
-              <div className="review-comment my-3">
-                <span>
-                  {" "}
-                  the course is specialized so that we learn ourselves
-                  deeply,simple and easy{" "}
-                </span>
-              </div>
-              <span className="mt-3 review-helpful">
-                Was this review Helpful ?
-              </span>
-              <div className="review-comment mt-2">
-                <div>
-                  <i className="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                </div>
-                <div>
-                  <i className="fa fa-thumbs-o-down" aria-hidden="true"></i>
-                </div>
-                <a className="review-report">Report</a>
-              </div>
-            </div>
-          </div>
 
-          <div className="row mt-5">
-            <div className="col-1">
-              <div className="review-img">
-                <span> M </span>
+          {defaultReviewer.map((reviewer) => (
+            <div className="row mt-5">
+              <div className="col-1">
+                <div className="review-img">
+                  <span> {reviewer.reviewer.substring(0, 1)} </span>
+                </div>
               </div>
-            </div>
-            <div className="col-9 mt-2">
-              <h3 className="review-auther-name">Asif H.</h3>
-              <span className="review-stars">
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star-half-o" aria-hidden="true"></i>
-              </span>
-              <span className="ms-1"> 2 weeks ago </span>
-              <div className="review-comment my-3">
-                <span>
-                  {" "}
-                  the course is specialized so that we learn ourselves
-                  deeply,simple and easy{" "}
+              <div className="col-9 mt-2">
+                <h3 className="review-auther-name">{reviewer.reviewer}</h3>
+                <span className="review-stars">
+                  <i className="fa fa-star" aria-hidden="true"></i>
+                  <i className="fa fa-star" aria-hidden="true"></i>
+                  <i className="fa fa-star" aria-hidden="true"></i>
+                  <i className="fa fa-star" aria-hidden="true"></i>
+                  <i className="fa fa-star-half-o" aria-hidden="true"></i>
                 </span>
-              </div>
-              <span className="mt-3 review-helpful">
-                Was this review Helpful ?
-              </span>
-              <div className="review-comment mt-2">
-                <div>
-                  <i className="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                <span className="ms-1"> {reviewer.createAt.slice(0, 10)} </span>
+                <div className="review-comment my-3">
+                  <span>{reviewer.review_text}</span>
                 </div>
-                <div>
-                  <i className="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                <span className="mt-3 review-helpful">
+                  Was this review Helpful ?
+                </span>
+                <div className="review-comment mt-2">
+                  <div>
+                    <i className="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <i className="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                  </div>
+                  <a className="review-report">Report</a>
                 </div>
-                <a className="review-report">Report</a>
               </div>
             </div>
-          </div>
+          ))}
 
-          <div className="row mt-5">
-            <div className="col-1">
-              <div className="review-img">
-                <span> M </span>
-              </div>
-            </div>
-            <div className="col-9 mt-2">
-              <h3 className="review-auther-name">Asif H.</h3>
-              <span className="review-stars">
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star-half-o" aria-hidden="true"></i>
-              </span>
-              <span className="ms-1"> 2 weeks ago </span>
-              <div className="review-comment my-3">
-                <span>
-                  {" "}
-                  the course is specialized so that we learn ourselves
-                  deeply,simple and easy{" "}
-                </span>
-              </div>
-              <span className="mt-3 review-helpful">
-                Was this review Helpful ?
-              </span>
-              <div className="review-comment mt-2">
-                <div>
-                  <i className="fa fa-thumbs-o-up" aria-hidden="true"></i>
+          {hideSeeMore === true
+            ? hiddenReviewer &&
+              hiddenReviewer.map((reviewer) => (
+                <div className="row mt-5">
+                  <div className="col-1">
+                    <div className="review-img">
+                      <span> {reviewer.reviewer.substring(0, 1)} </span>
+                    </div>
+                  </div>
+                  <div className="col-9 mt-2">
+                    <h3 className="review-auther-name">{reviewer.reviewer}</h3>
+                    <span className="review-stars">
+                      <i className="fa fa-star" aria-hidden="true"></i>
+                      <i className="fa fa-star" aria-hidden="true"></i>
+                      <i className="fa fa-star" aria-hidden="true"></i>
+                      <i className="fa fa-star" aria-hidden="true"></i>
+                      <i className="fa fa-star-half-o" aria-hidden="true"></i>
+                    </span>
+                    <span className="ms-1">
+                      {" "}
+                      {reviewer.createAt.slice(0, 10)}{" "}
+                    </span>
+                    <div className="review-comment my-3">
+                      <span>{reviewer.review_text}</span>
+                    </div>
+                    <span className="mt-3 review-helpful">
+                      Was this review Helpful ?
+                    </span>
+                    <div className="review-comment mt-2">
+                      <div>
+                        <i className="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                      </div>
+                      <div>
+                        <i
+                          className="fa fa-thumbs-o-down"
+                          aria-hidden="true"
+                        ></i>
+                      </div>
+                      <a className="review-report">Report</a>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <i className="fa fa-thumbs-o-down" aria-hidden="true"></i>
-                </div>
-                <a className="review-report">Report</a>
-              </div>
-            </div>
-          </div>
+              ))
+            : null}
 
-          <div className="row mt-5">
-            <div className="col-1">
-              <div className="review-img">
-                <span> M </span>
-              </div>
-            </div>
-            <div className="col-9 mt-2">
-              <h3 className="review-auther-name">Asif H.</h3>
-              <span className="review-stars">
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star-half-o" aria-hidden="true"></i>
-              </span>
-              <span className="ms-1"> 2 weeks ago </span>
-              <div className="review-comment my-3">
-                <span>
-                  {" "}
-                  the course is specialized so that we learn ourselves
-                  deeply,simple and easy{" "}
-                </span>
-              </div>
-              <span className="mt-3 review-helpful">
-                Was this review Helpful ?
-              </span>
-              <div className="review-comment mt-2">
-                <div>
-                  <i className="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                </div>
-                <div>
-                  <i className="fa fa-thumbs-o-down" aria-hidden="true"></i>
-                </div>
-                <a className="review-report">Report</a>
-              </div>
-            </div>
-          </div>
-
-          <div className="row mt-5">
-            <div className="col-1">
-              <div className="review-img">
-                <span> M </span>
-              </div>
-            </div>
-            <div className="col-9 mt-2">
-              <h3 className="review-auther-name">Asif H.</h3>
-              <span className="review-stars">
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star-half-o" aria-hidden="true"></i>
-              </span>
-              <span className="ms-1"> 2 weeks ago </span>
-              <div className="review-comment my-3">
-                <span>
-                  {" "}
-                  the course is specialized so that we learn ourselves
-                  deeply,simple and easy{" "}
-                </span>
-              </div>
-              <span className="mt-3 review-helpful">
-                Was this review Helpful ?
-              </span>
-              <div className="review-comment mt-2">
-                <div>
-                  <i className="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                </div>
-                <div>
-                  <i className="fa fa-thumbs-o-down" aria-hidden="true"></i>
-                </div>
-                <a className="review-report">Report</a>
-              </div>
-            </div>
-          </div>
-
-          <div className="row mt-5">
-            <div className="col-1">
-              <div className="review-img">
-                <span> M </span>
-              </div>
-            </div>
-            <div className="col-9 mt-2">
-              <h3 className="review-auther-name">Asif H.</h3>
-              <span className="review-stars">
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star" aria-hidden="true"></i>
-                <i className="fa fa-star-half-o" aria-hidden="true"></i>
-              </span>
-              <span className="ms-1"> 2 weeks ago </span>
-              <div className="review-comment my-3">
-                <span>
-                  {" "}
-                  the course is specialized so that we learn ourselves
-                  deeply,simple and easy{" "}
-                </span>
-              </div>
-              <span className="mt-3 review-helpful">
-                Was this review Helpful ?
-              </span>
-              <div className="review-comment mt-2">
-                <div>
-                  <i className="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                </div>
-                <div>
-                  <i className="fa fa-thumbs-o-down" aria-hidden="true"></i>
-                </div>
-                <a className="review-report">Report</a>
-              </div>
-            </div>
-          </div>
+          {hiddenReviewer.length > 0 && (
+            <button className="readmore my-4" onClick={handleClick}>
+              {" "}
+              <span>Read {hideSeeMore ? "Less" : "More"} </span>{" "}
+            </button>
+          )}
         </div>
       </div>
     </div>
