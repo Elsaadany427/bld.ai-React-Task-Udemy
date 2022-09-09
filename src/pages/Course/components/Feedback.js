@@ -5,7 +5,7 @@ export default function Feedback() {
   return (
     <div className="container component-margin feedback">
       <div className="row">
-        <div className="col-md-7">
+        <div className="col-md-12">
           <div className="row d-flex align-items-center">
             <div className="feedback-title">
               <h2>Student feedback</h2>

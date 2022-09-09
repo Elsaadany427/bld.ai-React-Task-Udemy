@@ -33,7 +33,7 @@ export default function Accordion() {
         </div>
       </div>
       <div className="row">
-        <div className="col-md-7">
+        <div className="col-md-12">
           <div className="accordion-content my-4 d-flex justify-content-between">
             <div className="accordion-length">
               <span>

@@ -10,7 +10,7 @@ export default function Description() {
   return (
     <div className="container component-margin description">
       <div className="row">
-        <div className="col-md-7">
+        <div className="col-md-12">
           <h2>Description</h2>
           <p className="description-content">
             {showMore ? text : `${text.substring(0, 250)}`}
