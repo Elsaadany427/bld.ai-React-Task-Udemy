@@ -29,7 +29,7 @@ export default function Feedback() {
               <div className="feedback-progress">
                 <div className="feedback-progress-bar">
                   <div className="row d-flex align-items-center" style={{width: "100%"}} >
-                    <div className="col-8">
+                    <div className="col-md-6 col-lg-8 col-6">
                       <div className="progress">
                         <div
                           className="progress-bar"
@@ -41,7 +41,7 @@ export default function Feedback() {
                         ></div>
                       </div>
                     </div>
-                    <div className="col-4">
+                    <div className="col-md-6 col-lg-4 col-6">
                       <span>
                         <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star" aria-hidden="true"></i>
@@ -55,7 +55,7 @@ export default function Feedback() {
 
                 <div className="feedback-progress-bar">
                   <div className="row  d-flex align-items-center" style={{width: "100%"}} >
-                    <div className="col-8">
+                    <div className="col-md-6 col-lg-8 col-6">
                       <div className="progress">
                         <div
                          className="progress-bar"
@@ -68,7 +68,7 @@ export default function Feedback() {
                         ></div>
                       </div>
                     </div>
-                    <div className="col-4">
+                    <div className="col-md-6 col-lg-4 col-6">
                       <span>
                         <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star" aria-hidden="true"></i>
@@ -83,7 +83,7 @@ export default function Feedback() {
 
                 <div className="feedback-progress-bar">
                   <div className="row  d-flex align-items-center" style={{width: "100%"}} >
-                    <div className="col-8">
+                    <div className="col-md-6 col-lg-8 col-6">
                       <div className="progress">
                         <div
                         className="progress-bar"
@@ -96,7 +96,7 @@ export default function Feedback() {
                         ></div>
                       </div>
                     </div>
-                    <div className="col-4">
+                    <div className="col-md-6 col-lg-4 col-6">
                       <span>
                         <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star" aria-hidden="true"></i>
@@ -111,7 +111,7 @@ export default function Feedback() {
 
                 <div className="feedback-progress-bar">
                   <div className="row  d-flex align-items-center" style={{width: "100%"}} >
-                    <div className="col-8">
+                    <div className="col-md-6 col-lg-8 col-6">
                       <div className="progress">
                         <div
                         className="progress-bar"
@@ -124,7 +124,7 @@ export default function Feedback() {
                         ></div>
                       </div>
                     </div>
-                    <div className="col-4">
+                    <div className="col-md-6 col-lg-4 col-6">
                       <span>
                         <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star" aria-hidden="true"></i>
