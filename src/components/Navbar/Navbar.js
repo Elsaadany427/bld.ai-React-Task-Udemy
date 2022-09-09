@@ -10,9 +10,6 @@ export default function Navbar() {
   const [searchParams, setSearchParams] = useSearchParams({});
   const inputRef = useRef(null);
 
-  useEffect(() => {
-    setSearchParams({ search: "" });
-  }, []);
   // search for word
   const handlesearch = (event) => {
     event.preventDefault();
