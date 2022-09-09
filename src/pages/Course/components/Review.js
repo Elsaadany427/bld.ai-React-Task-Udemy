@@ -58,7 +58,7 @@ export default function Review() {
 
           {defaultReviewer.map((reviewer) => (
             <div className="row mt-5">
-              <div className="col-1">
+              <div className="col-2">
                 <div className="review-img">
                   <span> {reviewer.reviewer.substring(0, 1)} </span>
                 </div>
@@ -104,7 +104,7 @@ export default function Review() {
             ? hiddenReviewer &&
               hiddenReviewer.map((reviewer) => (
                 <div className="row mt-5">
-                  <div className="col-1">
+                  <div className="col-2">
                     <div className="review-img">
                       <span> {reviewer.reviewer.substring(0, 1)} </span>
                     </div>

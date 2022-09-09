@@ -11,7 +11,7 @@ export default function Instructors() {
         {
           course.instructors.map((instructor) => (
         
-        <div className="col-md-7 mt-4" key={instructor.id}>
+        <div className="col-md-12 mt-4" key={instructor.id}>
           <h2 className="instructors-name"> {instructor.name} </h2>
           <p className="instructors-role">
             { instructor.job }
