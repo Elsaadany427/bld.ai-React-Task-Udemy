@@ -4,10 +4,16 @@ import { CourseContext } from "../../../State/courseContext";
 
 export default function Review() {
   const [hideSeeMore, sethideSeeMore] = useState(false);
+  const [like, setLike] = useState(false);
+  const [dislike, setdislike] = useState(false);
+
   const course = useContext(CourseContext);
   const defaultReviewer = [];
   const hiddenReviewer = [];
 
+  const handleLike = () => {
+    setLike(!like);
+  }
   for (let i = 0; i < Math.min(5, course.reviews.length); i++) {
     defaultReviewer.push(course.reviews[i]);
   }
@@ -75,10 +81,18 @@ export default function Review() {
                 </span>
                 <div className="review-comment mt-2">
                   <div>
-                    <i className="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                    {!like ? (
+                      <i className="fa fa-thumbs-o-up" aria-hidden="true" onClick={handleLike}></i>
+                    ) : (
+                      <i className="fa fa-thumbs-up" aria-hidden="true"></i>
+                    )}
                   </div>
                   <div>
-                    <i className="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                    {!dislike ? (
+                      <i className="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                    ) : (
+                      <i className="fa fa-thumbs-down" aria-hidden="true"></i>
+                    )}
                   </div>
                   <a className="review-report">Report</a>
                 </div>
@@ -116,11 +130,14 @@ export default function Review() {
                     </span>
                     <div className="review-comment mt-2">
                       <div>
-                        <i className="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                        <i
+                          className={`fa fa-thumbs-o-up`}
+                          aria-hidden="true"
+                        ></i>
                       </div>
                       <div>
                         <i
-                          className="fa fa-thumbs-o-down"
+                          className={`fa fa-thumbs-o-down`}
                           aria-hidden="true"
                         ></i>
                       </div>

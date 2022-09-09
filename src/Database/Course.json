@@ -477,7 +477,7 @@
           "createAt": "2022-06-09T11:54:39-02:00",
           "rate": 3.0691,
           "review_text": "Ipsum duis nulla veniam anim tempor fugiat commodo tempor eu. Aliqua officia labore eu enim aliquip occaecat pariatur ut sunt qui exercitation. Ipsum fugiat nulla laboris tempor ipsum consequat quis nostrud labore laboris est. Adipisicing exercitation excepteur qui veniam Lorem ea ex.\r\n",
-          "helpful": null
+          "helpful": true
         },
         {
           "id": "631b5a6c27f7c9860c50da2a",
@@ -1040,7 +1040,7 @@
           "createAt": "2022-04-22T12:53:02-02:00",
           "rate": 4.6844,
           "review_text": "Veniam fugiat elit aliquip occaecat anim qui laborum nulla tempor veniam duis dolor. Proident aute duis excepteur cupidatat dolore eu. Pariatur tempor labore ad do incididunt dolore. Excepteur minim nostrud dolor sunt id reprehenderit occaecat adipisicing aliqua nostrud aliqua dolor. Commodo aliquip sunt laborum sit magna excepteur mollit sint nisi occaecat officia ipsum mollit. Pariatur ad aliqua labore excepteur amet laboris velit excepteur sint aute ut.\r\n",
-          "helpful": null
+          "helpful": true
         },
         {
           "id": "631b5a6c7edda731ccacba68",
@@ -1593,7 +1593,7 @@
           "createAt": "2022-05-01T02:17:50-02:00",
           "rate": 3.4621,
           "review_text": "Magna mollit tempor tempor reprehenderit dolor veniam est eu veniam ipsum mollit dolore ullamco. Ut proident minim commodo officia Lorem ipsum elit exercitation ad aliqua. Minim qui mollit esse elit.\r\n",
-          "helpful": null
+          "helpful": true
         },
         {
           "id": "631b5a6cf159314b0d34317a",
@@ -1617,7 +1617,7 @@
           "createAt": "2022-07-03T06:41:27-02:00",
           "rate": 4.6777,
           "review_text": "Officia qui commodo laboris Lorem cillum sint tempor. Officia nostrud reprehenderit enim ad aute quis laborum cillum elit Lorem aliquip fugiat cillum sunt. Dolore eiusmod eiusmod irure est eiusmod nisi cillum dolor dolore pariatur minim deserunt consequat quis.\r\n",
-          "helpful": null
+          "helpful": true
         },
         {
           "id": "631b5a6cbbe2d17dc7cf3e04",
@@ -2157,7 +2157,7 @@
           "createAt": "2022-03-04T09:39:09-02:00",
           "rate": 3.3642,
           "review_text": "Ad adipisicing pariatur incididunt qui cupidatat elit laborum deserunt sunt velit nisi adipisicing id officia. Cupidatat eiusmod laboris enim cillum fugiat ex deserunt esse magna culpa irure consectetur veniam. Officia mollit et labore laboris pariatur elit incididunt eiusmod. Nostrud irure tempor ex cupidatat laborum aliqua proident exercitation id eu.\r\n",
-          "helpful": null
+          "helpful": true
         },
         {
           "id": "631b5a6ccdb14d1d1353fa06",
@@ -2181,7 +2181,7 @@
           "createAt": "2022-09-05T08:36:54-02:00",
           "rate": 3.1171,
           "review_text": "Dolor deserunt incididunt est eiusmod eu laborum aliquip officia nulla laboris elit eu proident eiusmod. Nostrud cupidatat qui in pariatur consequat nostrud tempor laborum ipsum enim minim laborum cillum dolor. Consequat et esse incididunt laboris ullamco sint mollit do aliqua esse incididunt. Pariatur aute ullamco sunt dolor exercitation qui labore duis voluptate do minim. Deserunt veniam sunt reprehenderit ex cupidatat adipisicing dolor voluptate magna incididunt nisi anim est. Lorem commodo Lorem est mollit id cillum occaecat. Commodo qui sit anim culpa irure.\r\n",
-          "helpful": null
+          "helpful": true
         },
         {
           "id": "631b5a6c3eacf8a3a12ec5e0",
@@ -2197,7 +2197,7 @@
           "createAt": "2022-07-12T03:49:14-02:00",
           "rate": 3.1834,
           "review_text": "Aute nulla nisi sunt sit aute. Consectetur velit non nulla excepteur anim do esse ad voluptate Lorem ullamco tempor cillum. Proident tempor aliqua ex excepteur excepteur do aliqua. Fugiat amet sunt laborum proident adipisicing aliqua culpa velit esse tempor occaecat officia sint ullamco.\r\n",
-          "helpful": null
+          "helpful": true
         },
         {
           "id": "631b5a6c47b68e9be8cef2ca",
@@ -2213,7 +2213,7 @@
           "createAt": "2022-03-21T03:13:19-02:00",
           "rate": 4.5925,
           "review_text": "Deserunt adipisicing consequat ut dolor cillum commodo ut consequat commodo Lorem adipisicing consequat. Magna ex incididunt mollit ut eu adipisicing quis nostrud proident. Commodo elit exercitation proident veniam exercitation consequat reprehenderit voluptate ex laborum labore id. Commodo eu cillum laboris non. Esse anim ut sit velit dolore dolor enim velit reprehenderit consequat mollit eiusmod. Id commodo sint sit est ex esse adipisicing.\r\n",
-          "helpful": null
+          "helpful": true
         },
         {
           "id": "631b5a6cba90bf02cc43410b",
@@ -2221,7 +2221,7 @@
           "createAt": "2022-04-12T07:34:07-02:00",
           "rate": 4.7609,
           "review_text": "Ex minim id irure adipisicing. Eiusmod pariatur in dolore enim commodo eiusmod qui consequat ipsum elit ut esse dolor commodo. Id tempor officia enim aute veniam elit consectetur ex voluptate reprehenderit amet in velit sit. Commodo in excepteur do anim sunt et aute id et quis amet pariatur aliquip. Veniam cillum sit proident ipsum aliquip consequat eiusmod occaecat magna sit. Velit elit culpa elit elit labore adipisicing minim labore excepteur irure nisi elit.\r\n",
-          "helpful": null
+          "helpful": true
         }
       ]
     },
@@ -2777,7 +2777,7 @@
           "createAt": "2022-04-26T10:18:51-02:00",
           "rate": 4.0886,
           "review_text": "In sunt pariatur magna proident excepteur laboris in. Velit exercitation eu aliquip adipisicing mollit aliquip dolore non exercitation eiusmod. Lorem mollit in quis minim adipisicing velit ut ea elit minim culpa ad. Magna tempor dolore Lorem esse amet excepteur.\r\n",
-          "helpful": null
+          "helpful": true
         },
         {
           "id": "631b5a6c1977dcb5c6b34fd8",
@@ -2785,7 +2785,7 @@
           "createAt": "2022-02-08T09:30:11-02:00",
           "rate": 3.4422,
           "review_text": "Pariatur deserunt amet nulla sint ad nulla aliquip reprehenderit labore nisi. Labore tempor quis cupidatat amet quis ea. Dolor voluptate pariatur pariatur labore do duis cillum. Amet aliquip est fugiat quis ad reprehenderit tempor Lorem non quis quis culpa. Ea aute eu tempor proident.\r\n",
-          "helpful": null
+          "helpful": true
         },
         {
           "id": "631b5a6ce6f559a07616d117",
@@ -2817,7 +2817,7 @@
           "createAt": "2022-06-23T10:58:45-02:00",
           "rate": 3.4376,
           "review_text": "Anim magna veniam laboris ipsum sunt consectetur esse irure duis eu minim fugiat. Tempor dolore esse aliquip voluptate incididunt. Officia veniam id ad tempor ea laboris dolore enim laboris irure elit minim sunt. Labore excepteur veniam adipisicing commodo officia fugiat enim. Et voluptate cupidatat veniam laboris adipisicing elit tempor. Mollit dolor tempor dolor sunt occaecat veniam eiusmod commodo culpa occaecat enim et sunt.\r\n",
-          "helpful": null
+          "helpful": true
         },
         {
           "id": "631b5a6c8d3bd2ea2577861f",
@@ -3374,7 +3374,7 @@
           "createAt": "2022-06-16T11:32:32-02:00",
           "rate": 3.533,
           "review_text": "Do culpa quis duis in aute. Elit id quis occaecat consequat nisi tempor aute. Eiusmod qui velit irure fugiat excepteur nisi aliquip adipisicing culpa deserunt est commodo. Laborum consectetur nulla velit irure incididunt mollit eu anim enim ullamco cillum. Do tempor eiusmod minim et sunt mollit in eiusmod ut excepteur ut incididunt cillum. Ut adipisicing proident aliquip laborum.\r\n",
-          "helpful": null
+          "helpful": true
         },
         {
           "id": "631b5a6c3bb0c5aede8f530b",
@@ -3382,7 +3382,7 @@
           "createAt": "2022-04-23T08:32:24-02:00",
           "rate": 3.2293,
           "review_text": "Adipisicing et tempor eiusmod qui. Ad ullamco id ullamco dolor tempor incididunt nulla. In sunt esse Lorem esse qui eiusmod ut aliquip id excepteur ex aliqua quis ex. Non sit id culpa quis est officia esse eu et. Velit culpa excepteur nostrud pariatur ullamco anim in officia deserunt non non ea veniam quis. Ex ut veniam qui laboris irure est. Incididunt labore cillum excepteur irure dolore dolor est sunt reprehenderit tempor est aliquip.\r\n",
-          "helpful": null
+          "helpful": true
         },
         {
           "id": "631b5a6cb25f4652158789dc",
@@ -3406,7 +3406,7 @@
           "createAt": "2022-03-04T02:42:13-02:00",
           "rate": 3.2341,
           "review_text": "Nostrud anim sit fugiat nisi tempor fugiat labore eu deserunt amet aliqua. Aute ullamco ullamco et sit elit sint exercitation esse velit. Duis deserunt amet duis occaecat sunt nostrud adipisicing excepteur nisi voluptate est dolore commodo aliqua. Officia eu aliquip fugiat velit tempor consequat.\r\n",
-          "helpful": null
+          "helpful": true
         },
         {
           "id": "631b5a6c83f46d56a5db00f3",
@@ -3422,7 +3422,7 @@
           "createAt": "2022-08-16T08:58:23-02:00",
           "rate": 4.9239,
           "review_text": "Qui aliquip ullamco mollit qui nulla ad ullamco mollit tempor sit exercitation pariatur id. Eiusmod pariatur eiusmod nisi consequat consequat voluptate aliquip nisi voluptate in anim eiusmod Lorem do. Deserunt reprehenderit non ut nisi Lorem aute labore laboris eu nulla esse sunt amet eiusmod. Elit ut ut aute commodo do enim ad officia veniam eiusmod dolor dolor. Consectetur eu et eiusmod laborum ullamco. Laboris enim do in anim quis irure aute.\r\n",
-          "helpful": null
+          "helpful": true
         },
         {
           "id": "631b5a6c01fe60e0ab26df88",
@@ -3945,7 +3945,7 @@
           "createAt": "2022-02-11T09:12:30-02:00",
           "rate": 3.806,
           "review_text": "Et fugiat proident duis laborum do adipisicing. Fugiat minim consequat sit elit enim duis deserunt tempor nisi nostrud et officia do laboris. Est nulla sit anim fugiat ullamco sunt magna pariatur.\r\n",
-          "helpful": null
+          "helpful": true
         },
         {
           "id": "631b5a6c285848624b476d40",
@@ -3977,7 +3977,7 @@
           "createAt": "2022-03-12T12:39:53-02:00",
           "rate": 4.8663,
           "review_text": "Et nostrud commodo elit ea ad do duis. Mollit laborum irure deserunt quis non adipisicing eu proident sunt occaecat ipsum ut amet. Commodo sit cupidatat Lorem ea laborum consectetur aliqua reprehenderit exercitation velit nisi ut tempor. Adipisicing irure ipsum consectetur duis. Fugiat esse excepteur velit ad esse culpa. Veniam ullamco reprehenderit dolor reprehenderit. Nulla labore et officia sunt cillum veniam id nisi.\r\n",
-          "helpful": null
+          "helpful": true
         },
         {
           "id": "631b5a6cbd88f11dad850cc7",
@@ -4535,7 +4535,7 @@
           "createAt": "2022-06-14T06:35:45-02:00",
           "rate": 4.0816,
           "review_text": "Consequat laboris cupidatat ut ex nisi. Reprehenderit do fugiat enim voluptate magna. Deserunt veniam laboris dolore in culpa dolore Lorem id aute officia. Sunt sit et commodo consequat elit anim Lorem reprehenderit sit culpa proident minim. Id quis aliqua esse in officia et fugiat commodo elit.\r\n",
-          "helpful": null
+          "helpful": true
         },
         {
           "id": "631b5a6c3d9748c82557d9d7",
@@ -4543,7 +4543,7 @@
           "createAt": "2022-05-08T11:10:54-02:00",
           "rate": 4.6316,
           "review_text": "Occaecat nostrud do occaecat sint cillum eu. Nulla sit irure pariatur duis officia adipisicing laboris. Occaecat sint Lorem laboris eu commodo ut officia quis.\r\n",
-          "helpful": null
+          "helpful": true
         },
         {
           "id": "631b5a6c2ed516f800372936",
@@ -4551,7 +4551,7 @@
           "createAt": "2022-04-12T07:44:25-02:00",
           "rate": 3.4218,
           "review_text": "Culpa laborum incididunt ipsum consequat duis sunt eu cillum quis adipisicing do incididunt excepteur. Deserunt eu id esse nulla non enim laboris ex labore dolore dolor. Laborum pariatur quis ad cupidatat adipisicing nisi cupidatat. Dolor voluptate minim sint aliqua consequat dolore pariatur cupidatat minim magna adipisicing eiusmod.\r\n",
-          "helpful": null
+          "helpful": true
         },
         {
           "id": "631b5a6c8fc8145a9e1b7baf",
@@ -4591,7 +4591,7 @@
           "createAt": "2022-07-03T03:56:44-02:00",
           "rate": 3.417,
           "review_text": "Tempor exercitation dolore cupidatat minim nostrud pariatur occaecat veniam sit anim ex ad sit. Minim aliquip elit pariatur excepteur. Sunt est nulla qui tempor quis dolor ipsum sunt et. Laboris consectetur mollit qui ullamco dolore mollit occaecat aliqua reprehenderit eiusmod sunt. Quis tempor ipsum fugiat enim occaecat adipisicing occaecat proident consectetur. Et exercitation laborum duis voluptate id. Lorem aliqua laborum incididunt tempor mollit consequat fugiat nostrud.\r\n",
-          "helpful": null
+          "helpful": true
         },
         {
           "id": "631b5a6cbe20659e05d16c6b",
@@ -5071,7 +5071,7 @@
           "createAt": "2022-07-26T11:08:53-02:00",
           "rate": 4.7606,
           "review_text": "Excepteur aliquip aute adipisicing sit exercitation ad ad mollit sit adipisicing nostrud. Culpa nisi officia aute eu et enim nulla in consectetur consectetur excepteur officia. Do esse sint id pariatur laboris ipsum. Fugiat proident incididunt enim ad amet fugiat ut occaecat incididunt.\r\n",
-          "helpful": null
+          "helpful": true
         },
         {
           "id": "631b5a6c33bb2171700c8e40",
@@ -5087,7 +5087,7 @@
           "createAt": "2022-02-07T12:23:42-02:00",
           "rate": 3.8904,
           "review_text": "Aliqua officia proident consectetur ea ullamco. Magna consequat mollit sint officia sit ad et ad eiusmod commodo elit nisi ea occaecat. Officia dolore voluptate dolore exercitation voluptate deserunt irure.\r\n",
-          "helpful": null
+          "helpful": true
         },
         {
           "id": "631b5a6ca74cef23bfdd98c9",
@@ -5111,7 +5111,7 @@
           "createAt": "2022-07-16T08:07:57-02:00",
           "rate": 4.1292,
           "review_text": "Magna occaecat amet culpa ea consequat consectetur officia non fugiat voluptate aliqua nostrud excepteur eu. Nostrud labore dolore nostrud amet consectetur occaecat adipisicing esse consectetur dolore. Consectetur est consequat Lorem aute qui pariatur deserunt adipisicing tempor. Minim laboris cupidatat Lorem do voluptate in dolor tempor cillum aliqua nostrud cillum. Ipsum do esse aliqua ad adipisicing aliqua ipsum reprehenderit ad exercitation id incididunt anim nostrud. Ex consequat ea fugiat duis sunt reprehenderit irure incididunt anim occaecat fugiat veniam fugiat.\r\n",
-          "helpful": null
+          "helpful": true
         },
         {
           "id": "631b5a6c3098f92390e53188",
