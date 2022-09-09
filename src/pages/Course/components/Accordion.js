@@ -1,11 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./Accordion.css";
+import { CourseContext } from "../../../State/courseContext";
 
 export default function Accordion() {
-  const [hidden, setHidden] = useState(false);
+  const [open, setOpen] = useState({ isActive: false, idx: null });
+  const [hideSeeMore, sethideSeeMore] = useState(false);
+  const course = useContext(CourseContext);
+  // To store the default Accordion Item
+  const defaultAccordionItem = [];
+  // To store the hidden Accordion Item inside see more
+  const hiddenAccordionItem = [];
+  for (let i = 0; i < Math.min(10, course.content.length); i++) {
+    defaultAccordionItem.push(course.content[i]);
+  }
+  for (let i = Math.min(10, course.content); i < course.content.length; i++) {
+    hiddenAccordionItem.push(course.content[i]);
+  }
+
+  // To handle see more
   const handleClick = () => {
-    setHidden(!hidden);
+    sethideSeeMore(!hideSeeMore);
   };
+  // To handle open Accordion
+  function handleOpen(index) {
+    setOpen({ ...open, isActive: !open.isActive, idx: index });
+  }
   return (
     <div className="container component-margin ">
       <div className="row">
@@ -29,497 +48,152 @@ export default function Accordion() {
             </button>
           </div>
           <div className="accordion" id="accordionPanelsStayOpenExample">
-            <div className="accordion-item">
-              <h2 className="accordion-header" id="panelsStayOpen-headingOne">
-                <button
-                  className="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseOne"
-                  aria-expanded="true"
-                  aria-controls="panelsStayOpen-collapseOne"
-                >
-                  <h4> Up and Running With Python </h4>
-                  <span>
-                    10 lectures • <span>57min</span>
-                  </span>
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseOne"
-                className="accordion-collapse collapse show"
-                aria-labelledby="panelsStayOpen-headingOne"
-              >
-                <div className="accordion-body">
-                  <ul>
-                    <li>
-                      <div className="accordion-body-content d-flex justify-content-between align-items-center mb-3">
-                        <i
-                          className="fa fa-play-circle me-3"
-                          aria-hidden="true"
-                        ></i>
-                        <div
-                          className="accordion-body-content-link d-flex justify-content-between"
-                          style={{ width: "100%" }}
-                        >
-                          <div className="d-flex" style={{ width: "100%" }}>
-                            <a href="#2">Installing Python</a>
-
-                            <span className="ms-auto accordion-body-content-time">
-                              <a href="#2" className="me-4">
-                                Preview
-                              </a>
-                              <span> 04:07 </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="accordion-body-content d-flex justify-content-between align-items-center mb-3">
-                        <i
-                          className="fa fa-play-circle me-3"
-                          aria-hidden="true"
-                        ></i>
-                        <div
-                          className="accordion-body-content-link d-flex justify-content-between "
-                          style={{ width: "100%" }}
-                        >
-                          <div className="d-flex" style={{ width: "100%" }}>
-                            <a href="#2">Installing Python</a>
-
-                            <span className="ms-auto accordion-body-content-time">
-                              <a href="#2" className="me-4">
-                                Preview
-                              </a>
-                              <span> 04:07 </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="accordion-body-content d-flex justify-content-between align-items-center mb-3">
-                        <i
-                          className="fa fa-play-circle me-3"
-                          aria-hidden="true"
-                        ></i>
-                        <div
-                          className="accordion-body-content-link d-flex justify-content-between "
-                          style={{ width: "100%" }}
-                        >
-                          <div className="d-flex" style={{ width: "100%" }}>
-                            <a href="#2">Installing Python</a>
-
-                            <span className="ms-auto accordion-body-content-time">
-                              <a href="#2" className="me-4">
-                                Preview
-                              </a>
-                              <span> 04:07 </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="accordion-item">
-              <h2 className="accordion-header" id="panelsStayOpen-headingOne2">
-                <button
-                  className="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseOne2"
-                  aria-expanded="true"
-                  aria-controls="panelsStayOpen-collapseOne2"
-                >
-                  <h4> The Basics (Data Types) </h4>
-                  <span>
-                    10 lectures • <span>57min</span>
-                  </span>
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseOne2"
-                className="accordion-collapse collapse"
-                aria-labelledby="panelsStayOpen-headingOne2"
-              >
-                <div className="accordion-body">
-                  <ul>
-                    <li>
-                      <div className="accordion-body-content d-flex justify-content-between align-items-center mb-3">
-                        <i
-                          className="fa fa-play-circle me-3"
-                          aria-hidden="true"
-                        ></i>
-                        <div
-                          className="accordion-body-content-link d-flex justify-content-between "
-                          style={{ width: "100%" }}
-                        >
-                          <div className="d-flex" style={{ width: "100%" }}>
-                            <a href="#2">Installing Python</a>
-
-                            <span className="ms-auto accordion-body-content-time">
-                              <a href="#2" className="me-4">
-                                Preview
-                              </a>
-                              <span> 04:07 </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="accordion-body-content d-flex justify-content-between align-items-center mb-3">
-                        <i
-                          className="fa fa-play-circle me-3"
-                          aria-hidden="true"
-                        ></i>
-                        <div
-                          className="accordion-body-content-link d-flex justify-content-between "
-                          style={{ width: "100%" }}
-                        >
-                          <div className="d-flex" style={{ width: "100%" }}>
-                            <a href="#2">Installing Python</a>
-
-                            <span className="ms-auto accordion-body-content-time">
-                              <a href="#2" className="me-4">
-                                Preview
-                              </a>
-                              <span> 04:07 </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="accordion-body-content d-flex justify-content-between align-items-center mb-3">
-                        <i
-                          className="fa fa-play-circle me-3"
-                          aria-hidden="true"
-                        ></i>
-                        <div
-                          className="accordion-body-content-link d-flex justify-content-between "
-                          style={{ width: "100%" }}
-                        >
-                          <div className="d-flex" style={{ width: "100%" }}>
-                            <a href="#2">Installing Python</a>
-
-                            <span className="ms-auto accordion-body-content-time">
-                              <a href="#2" className="me-4">
-                                Preview
-                              </a>
-                              <span> 04:07 </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="accordion-item">
-              <h2 className="accordion-header" id="panelsStayOpen-headingOne3">
-                <button
-                  className="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseOne3"
-                  aria-expanded="true"
-                  aria-controls="panelsStayOpen-collapseOne3"
-                >
-                  <h4> Conditions and Loops </h4>
-                  <span>
-                    10 lectures • <span>57min</span>
-                  </span>
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseOne3"
-                className="accordion-collapse collapse"
-                aria-labelledby="panelsStayOpen-headingOne3"
-              >
-                <div className="accordion-body">
-                  <ul>
-                    <li>
-                      <div className="accordion-body-content d-flex justify-content-between align-items-center mb-3">
-                        <i
-                          className="fa fa-play-circle me-3"
-                          aria-hidden="true"
-                        ></i>
-                        <div
-                          className="accordion-body-content-link d-flex justify-content-between "
-                          style={{ width: "100%" }}
-                        >
-                          <div className="d-flex" style={{ width: "100%" }}>
-                            <a href="#2">Installing Python</a>
-
-                            <span className="ms-auto accordion-body-content-time">
-                              <a href="#2" className="me-4">
-                                Preview
-                              </a>
-                              <span> 04:07 </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="accordion-body-content d-flex justify-content-between align-items-center mb-3">
-                        <i
-                          className="fa fa-play-circle me-3"
-                          aria-hidden="true"
-                        ></i>
-                        <div
-                          className="accordion-body-content-link d-flex justify-content-between "
-                          style={{ width: "100%" }}
-                        >
-                          <div className="d-flex" style={{ width: "100%" }}>
-                            <a href="#2">Installing Python</a>
-
-                            <span className="ms-auto accordion-body-content-time">
-                              <a href="#2" className="me-4">
-                                Preview
-                              </a>
-                              <span> 04:07 </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="accordion-body-content d-flex justify-content-between align-items-center mb-3">
-                        <i
-                          className="fa fa-play-circle me-3"
-                          aria-hidden="true"
-                        ></i>
-                        <div
-                          className="accordion-body-content-link d-flex justify-content-between "
-                          style={{ width: "100%" }}
-                        >
-                          <div className="d-flex" style={{ width: "100%" }}>
-                            <a href="#2">Installing Python</a>
-
-                            <span className="ms-auto accordion-body-content-time">
-                              <a href="#2" className="me-4">
-                                Preview
-                              </a>
-                              <span> 04:07 </span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            {hidden === false ? (
-              <>
-                <div className="accordion-item">
+            {defaultAccordionItem &&
+              defaultAccordionItem.map((item, index) => (
+                <div className="accordion-item" key={item.id}>
                   <h2
                     className="accordion-header"
-                    id="panelsStayOpen-headingOne4"
+                    id={`panelsStayOpen-heading${index}`}
                   >
                     <button
                       className="accordion-button"
                       type="button"
                       data-bs-toggle="collapse"
-                      data-bs-target="#panelsStayOpen-collapseOne4"
+                      data-bs-target={`#panelsStayOpen-collapse${index}`}
                       aria-expanded="true"
-                      aria-controls="panelsStayOpen-collapseOne4"
+                      aria-controls={`panelsStayOpen-collapse${index}`}
+                      onClick={() => handleOpen(index)}
                     >
-                      <h4> Functions! </h4>
+                      <h4> {item.lecture.title} </h4>
                       <span>
-                        10 lectures • <span>57min</span>
+                        {item.lecture.lessons.length} lectures •{" "}
+                        <span>{item.lecture.total_estimate_time}min</span>
                       </span>
                     </button>
                   </h2>
-                  <div
-                    id="panelsStayOpen-collapseOne4"
-                    className="accordion-collapse collapse"
-                    aria-labelledby="panelsStayOpen-headingOne4"
-                  >
-                    <div className="accordion-body">
-                      <ul>
-                        <li>
-                          <div className="accordion-body-content d-flex justify-content-between align-items-center mb-3">
-                            <i
-                              className="fa fa-play-circle me-3"
-                              aria-hidden="true"
-                            ></i>
-                            <div
-                              className="accordion-body-content-link d-flex justify-content-between"
-                              style={{ width: "100%" }}
-                            >
-                              <div className="d-flex" style={{ width: "100%" }}>
-                                <a href="#2">Installing Python</a>
-
-                                <span className="ms-auto accordion-body-content-time">
-                                  <a href="#2" className="me-4">
-                                    Preview
-                                  </a>
-                                  <span> 04:07 </span>
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="accordion-body-content d-flex justify-content-between align-items-center mb-3">
-                            <i
-                              className="fa fa-play-circle me-3"
-                              aria-hidden="true"
-                            ></i>
-                            <div
-                              className="accordion-body-content-link d-flex justify-content-between "
-                              style={{ width: "100%" }}
-                            >
-                              <div className="d-flex" style={{ width: "100%" }}>
-                                <a href="#2">Installing Python</a>
-
-                                <span className="ms-auto accordion-body-content-time">
-                                  <a href="#2" className="me-4">
-                                    Preview
-                                  </a>
-                                  <span> 04:07 </span>
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="accordion-body-content d-flex justify-content-between align-items-center mb-3">
-                            <i
-                              className="fa fa-play-circle me-3"
-                              aria-hidden="true"
-                            ></i>
-                            <div
-                              className="accordion-body-content-link d-flex justify-content-between "
-                              style={{ width: "100%" }}
-                            >
-                              <div className="d-flex" style={{ width: "100%" }}>
-                                <a href="#2">Installing Python</a>
-
-                                <span className="ms-auto accordion-body-content-time">
-                                  <a href="#2" className="me-4">
-                                    Preview
-                                  </a>
-                                  <span> 04:07 </span>
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h2
-                    className="accordion-header"
-                    id="panelsStayOpen-headingOne4"
-                  >
-                    <button
-                      className="accordion-button"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#panelsStayOpen-collapseOne4"
-                      aria-expanded="true"
-                      aria-controls="panelsStayOpen-collapseOne4"
+                  {open && (
+                    <div
+                      id={`#panelsStayOpen-collapse${index}`}
+                      className={`accordion-collapse collapse ${
+                        index === open.idx && open.isActive ? "show" : ""
+                      }`}
+                      aria-labelledby={`panelsStayOpen-heading${index}`}
                     >
-                      <h4> Functions! </h4>
-                      <span>
-                        10 lectures • <span>57min</span>
-                      </span>
-                    </button>
-                  </h2>
-                  <div
-                    id="panelsStayOpen-collapseOne4"
-                    className="accordion-collapse collapse"
-                    aria-labelledby="panelsStayOpen-headingOne4"
-                  >
-                    <div className="accordion-body">
-                      <ul>
-                        <li>
-                          <div className="accordion-body-content d-flex justify-content-between align-items-center mb-3">
-                            <i
-                              className="fa fa-play-circle me-3"
-                              aria-hidden="true"
-                            ></i>
-                            <div
-                              className="accordion-body-content-link d-flex justify-content-between"
-                              style={{ width: "100%" }}
-                            >
-                              <div className="d-flex" style={{ width: "100%" }}>
-                                <a href="#2">Installing Python</a>
+                      <div className="accordion-body">
+                        <ul>
+                          {item.lecture.lessons.map((lesson) => (
+                            <li key={lesson.id}>
+                              <div className="accordion-body-content d-flex justify-content-between align-items-center mb-3">
+                                <i
+                                  className="fa fa-play-circle me-3"
+                                  aria-hidden="true"
+                                ></i>
+                                <div
+                                  className="accordion-body-content-link d-flex justify-content-between"
+                                  style={{ width: "100%" }}
+                                >
+                                  <div
+                                    className="d-flex"
+                                    style={{ width: "100%" }}
+                                  >
+                                    <a href="#2">{lesson.title}</a>
 
-                                <span className="ms-auto accordion-body-content-time">
-                                  <a href="#2" className="me-4">
-                                    Preview
-                                  </a>
-                                  <span> 04:07 </span>
-                                </span>
+                                    <span className="ms-auto accordion-body-content-time">
+                                      {lesson.is_preview ? (
+                                        <a href="#2" className="me-4">
+                                          Preview
+                                        </a>
+                                      ) : null}
+                                      <span> {lesson.estimate_time} </span>
+                                    </span>
+                                  </div>
+                                </div>
                               </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="accordion-body-content d-flex justify-content-between align-items-center mb-3">
-                            <i
-                              className="fa fa-play-circle me-3"
-                              aria-hidden="true"
-                            ></i>
-                            <div
-                              className="accordion-body-content-link d-flex justify-content-between "
-                              style={{ width: "100%" }}
-                            >
-                              <div className="d-flex" style={{ width: "100%" }}>
-                                <a href="#2">Installing Python</a>
-
-                                <span className="ms-auto accordion-body-content-time">
-                                  <a href="#2" className="me-4">
-                                    Preview
-                                  </a>
-                                  <span> 04:07 </span>
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="accordion-body-content d-flex justify-content-between align-items-center mb-3">
-                            <i
-                              className="fa fa-play-circle me-3"
-                              aria-hidden="true"
-                            ></i>
-                            <div
-                              className="accordion-body-content-link d-flex justify-content-between "
-                              style={{ width: "100%" }}
-                            >
-                              <div className="d-flex" style={{ width: "100%" }}>
-                                <a href="#2">Installing Python</a>
-
-                                <span className="ms-auto accordion-body-content-time">
-                                  <a href="#2" className="me-4">
-                                    Preview
-                                  </a>
-                                  <span> 04:07 </span>
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
-              </>
-            ) : null}
-            <button className="readmore my-4" onClick={handleClick}> <span>Read {hidden ? 'More': 'Less'} </span> </button>
+              ))}
+            {hideSeeMore === false
+              ? hiddenAccordionItem &&
+                hiddenAccordionItem.map((item, index) => (
+                  <div className="accordion-item" key={item.id}>
+                    <h2
+                      className="accordion-header"
+                      id={`panelsStayOpen-heading${index}`}
+                    >
+                      <button
+                        className="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target={`#panelsStayOpen-collapse${index}`}
+                        aria-expanded="true"
+                        aria-controls={`panelsStayOpen-collapse${index}`}
+                        onClick={() => handleOpen(index)}
+                      >
+                        <h4> {item.lecture.title} </h4>
+                        <span>
+                          {item.lecture.lessons.length} lectures •{" "}
+                          <span>{item.lecture.total_estimate_time}min</span>
+                        </span>
+                      </button>
+                    </h2>
+                    {open && (
+                      <div
+                        id={`#panelsStayOpen-collapse${index}`}
+                        className={`accordion-collapse collapse ${
+                          index === open.idx && open.isActive ? "show" : ""
+                        }`}
+                        aria-labelledby={`panelsStayOpen-heading${index}`}
+                      >
+                        <div className="accordion-body">
+                          <ul>
+                            {item.lecture.lessons.map((lesson) => (
+                              <li key={lesson.id}>
+                                <div className="accordion-body-content d-flex justify-content-between align-items-center mb-3">
+                                  <i
+                                    className="fa fa-play-circle me-3"
+                                    aria-hidden="true"
+                                  ></i>
+                                  <div
+                                    className="accordion-body-content-link d-flex justify-content-between"
+                                    style={{ width: "100%" }}
+                                  >
+                                    <div
+                                      className="d-flex"
+                                      style={{ width: "100%" }}
+                                    >
+                                      <a href="#2">{lesson.title}</a>
+
+                                      <span className="ms-auto accordion-body-content-time">
+                                        {lesson.is_preview ? (
+                                          <a href="#2" className="me-4">
+                                            Preview
+                                          </a>
+                                        ) : null}
+                                        <span> {lesson.estimate_time} </span>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))
+              : null}
+            {hiddenAccordionItem.length > 0 && (
+              <button className="readmore my-4" onClick={handleClick}>
+                {" "}
+                <span>Read {hideSeeMore ? "More" : "Less"} </span>{" "}
+              </button>
+            )}
           </div>
         </div>
       </div>

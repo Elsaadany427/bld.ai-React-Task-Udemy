@@ -22,7 +22,6 @@ export default function Courses(props) {
   const [searchParams, setSearchParams] = useSearchParams();
   const search = searchParams.get("search");
 
-  
   // Reset Params based on search
   useEffect(() => {
     const param = searchParams.get("search");
@@ -59,18 +58,38 @@ export default function Courses(props) {
     setSearchCourses(filteredProducts);
   }, [search]);
 
+
+  // To capitalize 
+  function capitalize(tab){
+    const arr = tab.split(" ");
+    for (var i = 0; i < arr.length; i++) {
+      arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+    }
+    return arr.join(" ");;
+  }
+
+  // To capitalize 
+  function resetCapitalize(tab){
+    const arr = tab.split(" ");
+    for (var i = 0; i < arr.length; i++) {
+      arr[i] = arr[i].charAt(0).toLowerCase() + arr[i].slice(1);
+    }
+    return arr.join(" ");;
+  }
+
   // Handle Courses when tab clicked
   function handleCourses(tab) {
+    tab = capitalize(tab);
     setSearchParams({ search: tab });
     setLoading(true);
     axios
-      .get(
-        `https://62f965f63eab3503d1e45e85.mockapi.io/courses?category=${tab}`
-      )
+      .get(`http://localhost:4200/courses?category=${tab}`)
       .then((data) => {
         setTimeout(() => {
           setLoading(false);
         }, 500);
+
+       tab = resetCapitalize(tab)
 
         setcurrentTab({
           tabName: tab,

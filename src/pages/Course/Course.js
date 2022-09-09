@@ -7,22 +7,29 @@ import Description from "./components/Description";
 import Instructors from "./components/Instructors";
 import Feedback from "./components/Feedback";
 import Review from "./components/Review";
+import { useLocation } from "react-router-dom";
+import {CourseProvider} from "../../State/courseContext";
 
 export default function Course() {
+  const location = useLocation();
+  const course = location.state;
+
   return (
     <>
-      <section className="course">
-        <Header />
-        <div className="content mt-5">
-          <Learn />
-          <Accordion />
-          <Requirements />
-          <Description />
-          <Instructors />
-          <Feedback />
-          <Review />
-        </div>
-      </section>
+      <CourseProvider value={course}>
+        <section className="course">
+          <Header />
+          <div className="content mt-5">
+            <Learn />
+            <Accordion />
+            <Requirements />
+            <Description />
+            <Instructors />
+            <Feedback />
+            <Review />
+          </div>
+        </section>
+      </CourseProvider>
     </>
   );
 }
