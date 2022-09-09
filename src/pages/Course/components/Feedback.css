@@ -6,4 +6,5 @@
 }
 .feedback-progress-bar span i {
     margin-right: 0.4rem;
+    color: var(--clr-card-stars-container);
 }
