@@ -31,7 +31,7 @@ export default function Instructors() {
           </p>
           <div className="card mb-3" style={{ maxWidth: "540px" }}>
             <div className="row g-0 d-flex align-items-center">
-              <div className="col-md-4">
+              <div className="col-4">
                 <img
                   src="/instructor/10260436_946b_6.jpg"
                   className="img-fluid"
@@ -84,7 +84,7 @@ export default function Instructors() {
           </p>
           <div className="card mb-3" style={{ maxWidth: "540px" }}>
             <div className="row g-0 d-flex align-items-center">
-              <div className="col-md-4">
+              <div className="col-4">
                 <img
                   src="/instructor/52310762_220a.jpg"
                   className="img-fluid"

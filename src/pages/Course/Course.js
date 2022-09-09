@@ -6,6 +6,7 @@ import Requirements from "./components/Requirements";
 import Description from "./components/Description";
 import Instructors from "./components/Instructors";
 import Feedback from "./components/Feedback";
+import Review from "./components/Review";
 
 export default function Course() {
   return (
@@ -19,6 +20,7 @@ export default function Course() {
           <Description />
           <Instructors />
           <Feedback />
+          <Review />
         </div>
       </section>
     </>
