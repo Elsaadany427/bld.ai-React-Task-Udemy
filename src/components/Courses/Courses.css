@@ -54,3 +54,6 @@
     left: 50%;
     z-index: 11;
 }
+.btn-explore {
+    border: 1px solid var(--clr-primary) !important;
+}

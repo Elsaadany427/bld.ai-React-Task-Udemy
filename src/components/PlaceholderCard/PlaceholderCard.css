@@ -1,7 +1,11 @@
-.placeholder- {
+.placeholder-card {
     width: 274px;
     margin: 20px 20px 0 0;
+    
 }
-.placeholder- img {
+.placeholder-card img {
     border-radius: 0 !important;
+}
+.placeholder {
+    height: 0.8rem !important;
 }
