@@ -147,7 +147,7 @@ export default function Courses(props) {
             <>
               <h2> {currentTab.opportunities} </h2>
               <p>{currentTab.desc}</p>
-              <button className="btn btn-secondry btn-height">
+              <button className="btn btn-secondry btn-explore btn-height">
                 Explore {currentTab.tabName}
               </button>
             </>

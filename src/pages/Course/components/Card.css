@@ -118,7 +118,7 @@
     font-size: 1.6rem;
 }
 
-.btn {
+button[class^="single-card-button--"] {
     position: relative;
     align-items: center;
     border: none;
@@ -132,9 +132,10 @@
     white-space: nowrap;
     height: 4.8rem;
     min-width: 3rem !important;
+    border: 1px solid var(--clr-primary);
 }
 
-.btn:hover {
+[class^="single-card-button"]:hover {
     background: transparent;
 }
 

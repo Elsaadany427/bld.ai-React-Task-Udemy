@@ -17,7 +17,7 @@ export default function Card() {
   const course = useContext(CourseContext);
   return (
     <div className="single-card-content">
-      <div className={`single-card `}>
+      <div className={`single-card ${scroll ? "scrolled" : ""}`}>
         <div className="single-card-img">
           <img src={course.image} />
           <i className="fa fa-play-circle" aria-hidden="true"></i>
@@ -35,15 +35,15 @@ export default function Card() {
           </div>
           <div className="single-card-button mb-4">
             <div className="single-card-button-group">
-              <button className="btn btn-secondry single-card-button--cart">
+              <button className="single-card-button--cart btn btn-secondry ">
                 Go To Cart
               </button>
-              <button className="btn btn-secondry single-card-button--love">
+              <button className="single-card-button--love btn btn-secondry ">
                 <i class="fa fa-heart-o" aria-hidden="true"></i>
               </button>
             </div>
             <div>
-              <button className="btn btn-secondry single-card-button--buy">
+              <button className="single-card-button--buy btn btn-secondry ">
                 By now
               </button>
             </div>
@@ -79,7 +79,7 @@ export default function Card() {
                 Get your team access to 17,000+ top Udemy courses anytime,
                 anywhere.
               </span>
-              <button className="btn btn-secondry single-card-button--business">
+              <button className="single-card-button--business btn btn-secondry">
                 Try Udemy Business
               </button>
             </div>
