@@ -18,7 +18,7 @@ export default function Instructors() {
           </p>
           <div className="card mb-3" style={{ maxWidth: "540px" }}>
             <div className="row g-0 d-flex align-items-center">
-              <div className="col-4">
+              <div className="col-2">
                
                 <img
                   src={`${instructor.image}`}
