@@ -19,10 +19,10 @@ export default function Course() {
     <>
       <CourseProvider value={course}>
         <section className="course">
-          <Header />
+          <Header course={course}/>
           <div className="container">
             <div className="row">
-              <div className="col-md-8">
+              <div className="col-lg-8">
                 <div className="content mt-5">
                   <Learn />
                   <Accordion />
@@ -33,7 +33,7 @@ export default function Course() {
                   <Review />
                 </div>
               </div>
-              <div className="col-md-4">
+              <div className="col-lg-4">
                 <Card />
               </div>
             </div>

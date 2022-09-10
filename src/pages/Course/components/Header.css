@@ -30,3 +30,47 @@
 .header-authers {
     margin-bottom: 0.6rem;
 }
+.header-img {
+    position: relative;
+    height: 19rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+@media (max-width: 991px){
+    .header-img {
+        height: 34rem;
+    }
+}
+@media (max-width: 767px){
+    .header-img {
+        height: 26rem;
+    }
+}
+@media (max-width: 380px){
+    .header-img {
+        height: 16rem;
+    }
+}
+.header-img i {
+    font-size: 7rem;
+    z-index: 111;
+    color: var(--clr-secondry);
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+}
+
+.header-img p {
+    font-weight: bold;
+    color: var(--clr-secondry);
+    z-index: 11;
+}
+
+.header-img img {
+    max-width: 100%;
+    position: absolute;
+    height: 100%;
+}

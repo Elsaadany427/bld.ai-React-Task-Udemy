@@ -2,12 +2,20 @@ import React, { useContext } from "react";
 import "./Header.css";
 import Breadcrumb from "./Breadcrumb";
 
-export default function Header() {
+export default function Header(props) {
+  const {image} = props.course;
   return (
     <div className="header">
       <div className="container">
         <Breadcrumb />
         <div className="row">
+          <div className="d-block d-lg-none col-lg-12">
+            <div className="header-img">
+              <img src={image} />
+              <i className="fa fa-play-circle" aria-hidden="true"></i>
+              <p>Preview this course</p>
+            </div>
+          </div>
           <div className="col-md-8">
             <h1>
               TOTAL Python: Become an Advanced Python Developer in 16 days
