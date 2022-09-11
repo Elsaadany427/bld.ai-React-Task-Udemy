@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Course from "../../pages/Course/Course";
 
 export default function Card(props) {
   const { image, title, auther, starRate, students, price } = props.CardData;
@@ -9,10 +11,10 @@ export default function Card(props) {
           className="course-card"
         >
           <div className="card-img">
-            <img src={`/courses${image}`} alt={image} />
+            <img src={`${image}`} alt={image} />
           </div>
           <h3>
-            <a href="#h"> {title} </a>
+            <Link to={"/course"} state={props.CardData} > {title} </Link>
           </h3>
           <div>
             <span> {auther} </span>

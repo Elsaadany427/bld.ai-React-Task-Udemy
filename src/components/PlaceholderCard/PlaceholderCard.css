@@ -1,4 +1,11 @@
-.card {
+.placeholder-card {
     width: 274px;
     margin: 20px 20px 0 0;
+    
+}
+.placeholder-card img {
+    border-radius: 0 !important;
+}
+.placeholder {
+    height: 0.8rem !important;
 }

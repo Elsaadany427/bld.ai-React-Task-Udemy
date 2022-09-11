@@ -1,10 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useRef } from "react";
 import UdemyLogo from "../../assets/icons/logo-udemy.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { useSearchParams } from "react-router-dom";
 
 export default function Navbar() {
   const [open, setIsOpen] = useState(false);
+  const [searchParams, setSearchParams] = useSearchParams({});
+  const inputRef = useRef(null);
+
+  // search for word
+  const handlesearch = (event) => {
+    event.preventDefault();
+    setSearchParams({ search: inputRef.current.value });
+  };
+
+  const handleEmptySearch = () => {
+    if (!inputRef.current.value) setSearchParams({ search: "" });
+  };
+
   return (
     <div className="navbar flex-space-column">
       {/* Navbar in mobile */}
@@ -37,8 +52,18 @@ export default function Navbar() {
           </li>
           <li className="navbar__search-form">
             <form className="d-flex align-items-center">
-              <input type="text" placeholder="Search for anything" />
-              <button className="btn btn-dark btn-height">Search</button>
+              <input
+                type="text"
+                ref={inputRef}
+                placeholder="Search for anything"
+                onChange={handleEmptySearch}
+              />
+              <button
+                className="btn btn-dark btn-height"
+                onClick={handlesearch}
+              >
+                Search
+              </button>
               <FontAwesomeIcon className="search-icon" icon={faSearch} />
             </form>
           </li>

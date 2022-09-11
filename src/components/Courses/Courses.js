@@ -6,20 +6,33 @@ import { SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import PlaceholderCard from "../PlaceholderCard/PlaceholderCard";
 import CustemSwiper from "../Swiper/Swiper";
+import { useSearchParams } from "react-router-dom";
 
 export default function Courses(props) {
   const [loading, setLoading] = useState(true);
   const [Tabs, setTabs] = useState({});
   const [courses, setCourses] = useState([]);
+  const [searchCourses, setSearchCourses] = useState([]);
   const [currentTab, setcurrentTab] = useState({
     tabName: "",
     opportunities: "",
     desc: "",
   });
   const placeholder = [1, 2, 3, 4, 5];
+  const [searchParams, setSearchParams] = useSearchParams();
+  const search = searchParams.get("search");
 
+  // Reset Params based on search
   useEffect(() => {
-    // Fetch tabs
+    const param = searchParams.get("search");
+    if (param === "") {
+      searchParams.delete("search");
+      setSearchParams(searchParams);
+    }
+  }, [search]);
+
+  // Fetch tabs
+  useEffect(() => {
     axios
       .get("https://62f965f63eab3503d1e45e85.mockapi.io/tabs")
       .then((data) => {
@@ -35,16 +48,48 @@ export default function Courses(props) {
     if (Tabs[Object.keys(Tabs)[0]]) handleCourses(Object.keys(Tabs)[0]);
   }, [Tabs]);
 
+  // Make Search filter
+  useEffect(() => {
+    const filteredProducts = [];
+    courses.map((course) => {
+      if (!search || course.title.toLowerCase().includes(search.toLowerCase()))
+        filteredProducts.push(course);
+    });
+    setSearchCourses(filteredProducts);
+  }, [search]);
+
+
+  // To capitalize 
+  function capitalize(tab){
+    const arr = tab.split(" ");
+    for (var i = 0; i < arr.length; i++) {
+      arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+    }
+    return arr.join(" ");;
+  }
+
+  // To capitalize 
+  function resetCapitalize(tab){
+    const arr = tab.split(" ");
+    for (var i = 0; i < arr.length; i++) {
+      arr[i] = arr[i].charAt(0).toLowerCase() + arr[i].slice(1);
+    }
+    return arr.join(" ");;
+  }
+
+  // Handle Courses when tab clicked
   function handleCourses(tab) {
+    tab = capitalize(tab);
+    setSearchParams({ search: tab });
     setLoading(true);
     axios
-      .get(
-        `https://62f965f63eab3503d1e45e85.mockapi.io/courses?category=${tab}`
-      )
+      .get(`http://localhost:4200/courses?category=${tab}`)
       .then((data) => {
         setTimeout(() => {
           setLoading(false);
         }, 500);
+
+       tab = resetCapitalize(tab)
 
         setcurrentTab({
           tabName: tab,
@@ -78,7 +123,7 @@ export default function Courses(props) {
                 key={tab}
                 onClick={() => handleCourses(tab)}
               >
-                <a href={`#${tab}`}>{tab}</a>
+                <span>{tab}</span>
               </li>
             ))}
           </ul>
@@ -92,7 +137,7 @@ export default function Courses(props) {
                 <span className="placeholder col-6"></span>
               </p>
               <a
-                href="#"
+                href="#x"
                 tabIndex="-1"
                 className="btn btn-primary disabled placeholder col-4"
                 aria-hidden="true"
@@ -102,7 +147,7 @@ export default function Courses(props) {
             <>
               <h2> {currentTab.opportunities} </h2>
               <p>{currentTab.desc}</p>
-              <button className="btn btn-secondry btn-height">
+              <button className="btn btn-secondry btn-explore btn-height">
                 Explore {currentTab.tabName}
               </button>
             </>
@@ -125,11 +170,14 @@ export default function Courses(props) {
             </CustemSwiper>
           ) : (
             <CustemSwiper>
-              {courses.map((card) => (
-                <SwiperSlide key={card.id}>
-                  <Card key={card.id} CardData={card} />
-                </SwiperSlide>
-              ))}
+              {courses.map((card) =>
+                !search ||
+                card.title.toLowerCase().includes(search.toLowerCase()) ? (
+                  <SwiperSlide key={card.id}>
+                    <Card key={card.id} CardData={card} />
+                  </SwiperSlide>
+                ) : null
+              )}
             </CustemSwiper>
           )}
         </div>

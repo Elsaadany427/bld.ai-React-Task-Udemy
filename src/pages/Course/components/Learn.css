@@ -1,0 +1,46 @@
+.learn {
+    border: 1px solid var(--clr-gray-1);
+    padding: 2.4rem;
+}
+
+.learn-title {
+    font-weight: bold;
+}
+
+.learn-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.learn-list li {
+    width: calc(50% - (2.4rem/2));
+}
+
+ .learn-list-main-div div {
+    flex: 1;
+    min-width: 1px;
+    min-height: 1.96rem;
+}
+
+.learn-list-main-div {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.learn-list-main-div i {
+    margin-top: 0.4rem;
+}
+.learn-list-main-div span {
+    display: inline-block;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}

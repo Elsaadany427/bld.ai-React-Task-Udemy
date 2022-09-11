@@ -1,0 +1,9 @@
+.requirements-list li {
+    display: flex;
+    font-size: 1.4rem;
+}
+
+.requirements-list li i {
+    font-size: 0.8rem;
+    margin-top: 0.6rem;
+}

@@ -1,0 +1,191 @@
+.single-card-content {
+    width: 100%;
+    position: relative;
+}
+
+.single-card {
+    width: 100%;
+    z-index: 1;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .08), 0 4px 12px rgba(0, 0, 0, .08);
+    display: block;
+    position: absolute;
+    top: -23.8rem;
+    max-width: 34rem;
+    background: var(--clr-secondry);
+}
+
+.single-card-img::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.single-card.scrolled {
+    position: fixed;
+    top: 1.6rem;
+    z-index: 3;
+    opacity: 0;
+    animation: sidebar-container 250ms linear 250ms forwards;
+}
+@media (max-width: 991px){
+    .single-card {
+        display: none;
+    }
+}
+.single-card.scrolled .single-card-img{
+    display: none;
+}
+
+@keyframes sidebar-container {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.single-card-img {
+    position: relative;
+    height: 19rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.single-card-img i {
+    font-size: 7rem;
+    z-index: 111;
+    color: var(--clr-secondry);
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+}
+
+.single-card-img p {
+    font-weight: bold;
+    color: var(--clr-secondry);
+    z-index: 11;
+}
+
+.single-card-img img {
+    max-width: 100%;
+    position: absolute;
+    height: 100%;
+}
+
+.single-card-body {
+    padding: 1rem 1.5rem;
+}
+
+.single-card-price {
+    display: flex;
+    align-items: center;
+}
+
+.single-card-price h1 {
+    font-size: clamp(2rem, calc(0.5rem + 1.51vw), 2.82rem);
+    display: inline;
+    margin-bottom: 0;
+}
+
+.single-card-price span {
+    font-size: clamp(1.6rem, calc(1.09rem + 0.09vw), 2rem);
+}
+
+.single-card-price .single-card-price--span {
+    text-decoration: line-through;
+    color: var(--clr-gray-2);
+    font-size: clamp(1.6rem, calc(1.09rem + 0.09vw), 2rem);
+}
+
+.single-card-clock {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    color: var(--clr-red);
+}
+
+.single-card-clock i {
+    font-size: 1.6rem;
+}
+
+button[class^="single-card-button--"] {
+    position: relative;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    padding: 0 1.2rem;
+    justify-content: center;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: bottom;
+    white-space: nowrap;
+    height: 4.8rem;
+    min-width: 3rem !important;
+    border: 1px solid var(--clr-primary);
+}
+
+[class^="single-card-button"]:hover {
+    background: transparent;
+}
+
+.single-card-button-group {
+    margin-top: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.single-card-button--cart {
+    background: var(--clr-spectrum-light) !important;
+    color: var(--clr-secondry) !important;
+    flex: 1;
+}
+
+
+.single-card-button--love,
+.single-card-button--buy {
+    border: 1px solid var(--clr-spectrum);
+}
+
+.single-card-button--love i {
+    font-size: 2rem;
+}
+.single-card-button--buy {
+    width: 100%;
+    margin-top: 1rem;
+}
+.signle-card-include h4 {
+    font-weight: bold;
+}
+.single-card-include-list {
+    font-size: 1.6rem;
+}
+.single-card-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: underline;
+}
+.single-card-links {
+    margin-top: 1rem;
+}
+.single-card-links a {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.single-card-button--business {
+    margin-top: 2rem;
+    width: 100%;
+    border: 1px solid var(--clr-spectrum);
+}
