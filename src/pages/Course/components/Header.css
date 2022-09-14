@@ -3,32 +3,42 @@
     padding: 3.2rem;
     color: var(--clr-secondry);
 }
-.header a{
-   text-decoration: underline !important;
-   color: var(--clr-anchor);
+
+.header a {
+    text-decoration: underline !important;
+    color: var(--clr-anchor);
 }
-.header-rate-number, .header-rate-stars{
+
+.header-rate-number,
+.header-rate-stars {
     color: var(--clr-card-stars-container)
- }
- .header-rate-number {
+}
+
+.header-rate-number {
     font-weight: bold
- }
-.header-rate span{
+}
+
+.header-rate span {
     margin-right: .4rem;
 }
-.header-rate-stars i{
+
+.header-rate-stars i {
     margin-right: .2rem;
 }
 
-.header-authers, .header-authers-name a{
+.header-authers,
+.header-authers-name a {
     text-transform: capitalize !important;
 }
-.header-authers .header-authers-name a{
+
+.header-authers .header-authers-name a {
     margin-right: 0.4rem;
 }
+
 .header-authers {
     margin-bottom: 0.6rem;
 }
+
 .header-img {
     position: relative;
     height: 19rem;
@@ -39,21 +49,35 @@
     overflow: hidden;
 }
 
-@media (max-width: 991px){
+@media (max-width: 991px) {
     .header-img {
         height: 34rem;
     }
-}
-@media (max-width: 767px){
-    .header-img {
-        height: 22rem;
+
+    .header h1 {
+        font-size: clamp(1.8rem, calc(2.5rem + 1.51vw), 2rem);
+
     }
 }
-@media (max-width: 380px){
+
+@media (max-width: 767px) {
+    .header-img {
+        height: 28rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .header-img {
+        height: 20rem;
+    }
+}
+
+@media (max-width: 380px) {
     .header-img {
         height: 16rem;
     }
 }
+
 .header-img i {
     font-size: 7rem;
     z-index: 111;
@@ -106,7 +130,7 @@ button[class^="header-button--"] {
     flex: 1;
 }
 
-.header-button--love{
+.header-button--love {
     border: 1px solid var(--clr-secondry) !important;
 }
 
@@ -146,9 +170,11 @@ button[class^="header-button--"] {
     text-decoration: underline;
     padding: 0 4rem;
 }
+
 .header-links {
     margin-top: 1rem;
 }
+
 .header-links a {
     font-size: 1.4rem;
     font-weight: bold;

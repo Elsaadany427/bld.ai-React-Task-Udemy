@@ -20,8 +20,8 @@ export default function Header(props) {
               <p>Preview this course</p>
             </div>
           </div>
-          <div className="col-md-8">
-            <h1>
+          <div className="col-lg-8 col-12">
+            <h1 className="mt-3">
               TOTAL {course.title}: Become an Advanced {course.title} Developer
               in 16 days
             </h1>
@@ -89,7 +89,7 @@ export default function Header(props) {
                 </button>
               </div>
 
-              <div className="header-links">
+              <div className="header-links d-flex d-lg-none">
                 <a href="#w">Share</a>
                 <a href="#w">Gift this course</a>
                 <a href="#w">Apply Coupon</a>

@@ -16,7 +16,7 @@
     z-index: 3;
 }
 
-.navOverride.scrolled .navOverride-rate-total a {
+.navOverride-rate-total a {
     color: var(--clr-secondry);
 }
 .navOverride-title {
