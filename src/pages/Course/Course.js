@@ -6,7 +6,7 @@ import Requirements from "./components/Requirements";
 import Description from "./components/Description";
 import Instructors from "./components/Instructors";
 import Feedback from "./components/Feedback";
-import Review from "./components/Review";
+import Review from "./components/Review/Review";
 import Card from "./components/Card";
 import { useLocation } from "react-router-dom";
 import { CourseProvider } from "../../State/courseContext";

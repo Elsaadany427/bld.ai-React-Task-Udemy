@@ -50,7 +50,7 @@ export default function Accordion() {
           <div className="accordion" id="accordionPanelsStayOpenExample">
             {defaultAccordionItem &&
               defaultAccordionItem.map((item, index) => (
-                <div className="accordion-item" key={item.id}>
+                <div className="accordion-item" key={item.lecture.id}>
                   <h2
                     className="accordion-header"
                     id={`panelsStayOpen-heading${index}`}

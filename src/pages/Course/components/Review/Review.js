@@ -1,19 +1,15 @@
 import React, { useState, useContext } from "react";
 import "./Review.css";
-import { CourseContext } from "../../../State/courseContext";
+import { CourseContext } from "../../../../State/courseContext"
+import Like from "./Components/Like";
 
 export default function Review() {
   const [hideSeeMore, sethideSeeMore] = useState(false);
-  const [like, setLike] = useState(false);
-  const [dislike, setdislike] = useState(false);
 
   const course = useContext(CourseContext);
   const defaultReviewer = [];
   const hiddenReviewer = [];
 
-  const handleLike = () => {
-    setLike(!like);
-  }
   for (let i = 0; i < Math.min(5, course.reviews.length); i++) {
     defaultReviewer.push(course.reviews[i]);
   }
@@ -57,7 +53,7 @@ export default function Review() {
           </div>
 
           {defaultReviewer.map((reviewer) => (
-            <div className="row mt-5">
+            <div className="row mt-5" key={reviewer.id}>
               <div className="col-2">
                 <div className="review-img">
                   <span> {reviewer.reviewer.substring(0, 1)} </span>
@@ -80,20 +76,7 @@ export default function Review() {
                   Was this review Helpful ?
                 </span>
                 <div className="review-comment mt-2">
-                  <div>
-                    {!like ? (
-                      <i className="fa fa-thumbs-o-up" aria-hidden="true" onClick={handleLike}></i>
-                    ) : (
-                      <i className="fa fa-thumbs-up" aria-hidden="true"></i>
-                    )}
-                  </div>
-                  <div>
-                    {!dislike ? (
-                      <i className="fa fa-thumbs-o-down" aria-hidden="true"></i>
-                    ) : (
-                      <i className="fa fa-thumbs-down" aria-hidden="true"></i>
-                    )}
-                  </div>
+                    <Like />
                   <a className="review-report">Report</a>
                 </div>
               </div>
@@ -129,18 +112,7 @@ export default function Review() {
                       Was this review Helpful ?
                     </span>
                     <div className="review-comment mt-2">
-                      <div>
-                        <i
-                          className={`fa fa-thumbs-o-up`}
-                          aria-hidden="true"
-                        ></i>
-                      </div>
-                      <div>
-                        <i
-                          className={`fa fa-thumbs-o-down`}
-                          aria-hidden="true"
-                        ></i>
-                      </div>
+                      <Like />
                       <a className="review-report">Report</a>
                     </div>
                   </div>
