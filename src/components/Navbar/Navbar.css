@@ -150,6 +150,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
   transform: translateX(-100%);
   transition: all .45s ease-in-out;
+  z-index: 111;
 }
 
 .navbar__mobile-list.open {

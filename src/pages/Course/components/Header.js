@@ -1,9 +1,13 @@
 import React, { useContext } from "react";
+import { CourseContext } from "../../../State/courseContext";
+
 import "./Header.css";
 import Breadcrumb from "./Breadcrumb";
 
 export default function Header(props) {
-  const {image} = props.course;
+  const { image } = props.course;
+  const course = useContext(CourseContext);
+
   return (
     <div className="header">
       <div className="container">
@@ -16,16 +20,17 @@ export default function Header(props) {
               <p>Preview this course</p>
             </div>
           </div>
-          <div className="col-md-8">
-            <h1>
-              TOTAL Python: Become an Advanced Python Developer in 16 days
+          <div className="col-lg-8 col-12">
+            <h1 className="mt-3">
+              TOTAL {course.title}: Become an Advanced {course.title} Developer
+              in 16 days
             </h1>
             <p>
-              One REAL Python project per day. From ZERO to Facial Recognition.
-              Machine Learning, Data Science, Django, IGU, Games+
+              One REAL {course.title} project per day. From ZERO to Facial
+              Recognition. Machine Learning, Data Science, Django, IGU, Games+
             </p>
             <span className="header-rate">
-              <span className="header-rate-number">4.7</span>
+              <span className="header-rate-number">{course.starRate}</span>
               <span className="header-rate-stars">
                 <i className="fa fa-star" aria-hidden="true"></i>
                 <i className="fa fa-star" aria-hidden="true"></i>
@@ -35,9 +40,11 @@ export default function Header(props) {
               </span>
               <span className="header-rate-total">
                 {" "}
-                <a href="#w">(1,312 ratings)</a>{" "}
+                <a href="#w">({course.rate_num} ratings)</a>{" "}
               </span>
-              <span className="header-rate-students">17,385 students </span>
+              <span className="header-rate-students">
+                {course.students} students{" "}
+              </span>
             </span>
             <p className="header-authers">
               <span> Created by </span>
@@ -53,19 +60,40 @@ export default function Header(props) {
                   className="fa fa-exclamation-circle me-3"
                   aria-hidden="true"
                 ></i>
-                <span>Last updated 9/2022</span>
+                <span>Last updated {course.update_date.substring(0, 10)}</span>
               </span>
               <span className="me-4 d-block d-md-inline">
                 <i className="fa fa-globe me-3"></i>
-                <span>English</span>
+                <span>{course.content_lang}</span>
               </span>
               <span className="me-4 d-block d-md-inline">
                 <i
                   className="fa fa-creative-commons me-3"
                   aria-hidden="true"
                 ></i>
-                <span>English [Auto]</span>
+                <span>{course.caption_lang} [Auto]</span>
               </span>
+
+              <div className="header-price  d-flex d-lg-none">
+                <h1> E£ {course.price}</h1>
+                <span className="ms-2 header-price--span"> E£679.99 </span>
+                <span className="ms-4"> 71% off </span>
+              </div>
+
+              <div className="header-button-group d-flex d-lg-none">
+                <button className="header-button--cart btn btn-secondry ">
+                  Go To Cart
+                </button>
+                <button className="header-button--love btn btn-secondry ">
+                  <i className="fa fa-heart-o" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <div className="header-links d-flex d-lg-none">
+                <a href="#w">Share</a>
+                <a href="#w">Gift this course</a>
+                <a href="#w">Apply Coupon</a>
+              </div>
             </div>
           </div>
         </div>
