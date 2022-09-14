@@ -1,6 +1,7 @@
 .accordion-collapse {
     padding: 0 1.4rem;
 }
+
 .accordion-content button {
     background-color: transparent;
 }
@@ -13,11 +14,15 @@
 
 .accordion h2 {
     max-width: 87rem !important;
+    z-index: 1;
+    position: relative;
 }
+
 .accordion-button {
     background: var(--clr-f7) !important;
     padding: 1.6rem 2.4rem;
 }
+
 .accordion-button:not(.collapsed)::before {
     background-image: var(--bs-accordion-btn-active-icon);
     transform: var(--bs-accordion-btn-icon-transform);
@@ -58,17 +63,21 @@
 .accordion-body-content i {
     font-size: 1.5rem;
 }
+
 .accordion-body-content-link a {
     font-size: 1.3rem;
 }
+
 .accordion-body-content-time {
     color: var(--clr-gray-2);
     font-weight: bold;
 }
+
 .accordion-body-content-time a {
     color: var(--swiper-theme-color);
     text-decoration: underline !important;
 }
+
 .readmore {
     width: 100%;
     border: 1px solid var(--clr-gray-2);
@@ -78,6 +87,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .readmore span {
     font-weight: bold;
 }
