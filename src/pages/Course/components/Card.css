@@ -10,14 +10,14 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, .08), 0 4px 12px rgba(0, 0, 0, .08);
     display: block;
     position: absolute;
-    top: -35.8rem;
+    top: -23.8rem;
     max-width: 34rem;
     background: var(--clr-secondry);
 }
 
 @media (min-width:991px) and (max-width: 1199px) {
     .single-card {
-        top: -29.8rem;
+        top: -21.8rem;
     }
 }
 

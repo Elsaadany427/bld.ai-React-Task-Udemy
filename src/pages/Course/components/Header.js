@@ -22,8 +22,7 @@ export default function Header(props) {
           </div>
           <div className="col-lg-8 col-12">
             <h1 className="mt-3">
-              TOTAL {course.title}: Become an Advanced {course.title} Developer
-              in 16 days
+              {course.title}
             </h1>
             <p>
               One REAL {course.title} project per day. From ZERO to Facial
