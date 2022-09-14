@@ -10,6 +10,7 @@ import Review from "./components/Review";
 import Card from "./components/Card";
 import { useLocation } from "react-router-dom";
 import { CourseProvider } from "../../State/courseContext";
+import NavOverride from "./components/NavOverride";
 
 export default function Course() {
   const location = useLocation();
@@ -18,6 +19,7 @@ export default function Course() {
   return (
     <>
       <CourseProvider value={course}>
+        <NavOverride />
         <section className="course">
           <Header course={course}/>
           <div className="container">

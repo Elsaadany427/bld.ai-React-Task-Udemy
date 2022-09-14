@@ -1,0 +1,41 @@
+.navOverride {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .08), 0 4px 12px rgba(0, 0, 0, .16);
+    top: 0;
+    bottom: auto;
+    padding: 1.6rem 2.4rem;
+}
+.navOverride.scrolled {
+    display: flex;
+    position: fixed;
+    background: var(--clr-primary);
+    color: var(--clr-secondry);
+    z-index: 3;
+}
+
+.navOverride.scrolled .navOverride-rate-total a {
+    color: var(--clr-secondry);
+}
+.navOverride-title {
+    color: var(--clr-secondry) !important;
+}
+
+.navOverride-rate-number,
+.navOverride-rate-stars {
+    color: var(--clr-card-stars-container)
+}
+
+.navOverride-rate-number {
+    font-weight: bold
+}
+
+.navOverride-rate span {
+    margin-right: .4rem;
+}
+
+.navOverride-rate-stars i {
+    margin-right: .2rem;
+}
