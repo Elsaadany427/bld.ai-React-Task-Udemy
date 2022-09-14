@@ -1,7 +1,6 @@
 .header {
     background: var(--clr-primary);
-    padding-top: 3.2rem;
-    padding-bottom: 3.2rem;
+    padding: 3.2rem;
     color: var(--clr-secondry);
 }
 .header a{
@@ -47,7 +46,7 @@
 }
 @media (max-width: 767px){
     .header-img {
-        height: 26rem;
+        height: 22rem;
     }
 }
 @media (max-width: 380px){
@@ -73,4 +72,84 @@
     max-width: 100%;
     position: absolute;
     height: 100%;
+}
+
+
+
+button[class^="header-button--"] {
+    position: relative;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    padding: 0 1.2rem;
+    justify-content: center;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: bottom;
+    white-space: nowrap;
+    height: 4.8rem;
+    min-width: 3rem !important;
+}
+
+.header-button-group {
+    margin-top: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.header-button--cart {
+    background: var(--clr-spectrum-light) !important;
+    color: var(--clr-secondry) !important;
+    border: 1px solid var(--clr-primary) !important;
+    flex: 1;
+}
+
+.header-button--love{
+    border: 1px solid var(--clr-secondry) !important;
+}
+
+.header-button--love i {
+    font-size: 2rem;
+    color: var(--clr-secondry);
+}
+
+
+.header-price {
+    display: flex;
+    align-items: center;
+    margin-top: 1.8rem;
+}
+
+.header-price h1 {
+    font-size: clamp(3rem, calc(0.5rem + 1.51vw), 2.82rem);
+    display: inline;
+    margin-bottom: 0;
+}
+
+.header-price span {
+    font-size: clamp(1.6rem, calc(1.09rem + 0.09vw), 2rem);
+}
+
+.header-price .header-price--span {
+    text-decoration: line-through;
+    color: var(--clr-gray-2);
+    font-size: clamp(1.6rem, calc(1.09rem + 0.09vw), 2rem);
+}
+
+
+.header-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: underline;
+    padding: 0 4rem;
+}
+.header-links {
+    margin-top: 1rem;
+}
+.header-links a {
+    font-size: 1.4rem;
+    font-weight: bold;
 }
