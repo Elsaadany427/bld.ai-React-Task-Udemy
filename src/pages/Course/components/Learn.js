@@ -12,8 +12,8 @@ export default function Learn() {
           <div className="learn">
             <h2 className="learn-title mb-4">What you'll learn</h2>
             <ul className="learn-list">
-              {course.what_learn.map((learn) => (
-                <li>
+              {course.what_learn.map((learn, index) => (
+                <li key={index}>
                   <div className="learn-list-main-div">
                     <i className="fa fa-check me-4" aria-hidden="true"></i>
                     <div>

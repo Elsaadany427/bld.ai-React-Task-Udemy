@@ -39,7 +39,7 @@ export default function Card() {
                 Go To Cart
               </button>
               <button className="single-card-button--love btn btn-secondry ">
-                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                <i className="fa fa-heart-o" aria-hidden="true"></i>
               </button>
             </div>
             <div>
@@ -55,15 +55,15 @@ export default function Card() {
             <h4 className="mb-3">This course includes:</h4>
             <ul className="single-card-include-list">
               <li>
-                <i class="fa fa-youtube-play me-3 mb-3" aria-hidden="true"></i>
+                <i className="fa fa-youtube-play me-3 mb-3" aria-hidden="true"></i>
                 <span> {course.includes.total_time_estimate} </span>
               </li>
               <li>
-                <i class="fa fa-file-o me-3 mb-3" aria-hidden="true"></i>{" "}
+                <i className="fa fa-file-o me-3 mb-3" aria-hidden="true"></i>{" "}
                 <span> {course.includes.articles_num} </span>
               </li>
               <li>
-                <i class="fa fa-download me-3 mb-3" aria-hidden="true"></i>{" "}
+                <i className="fa fa-download me-3 mb-3" aria-hidden="true"></i>{" "}
                 <span> {course.includes.featues} </span>
               </li>
             </ul>

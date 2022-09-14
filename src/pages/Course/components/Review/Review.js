@@ -1,33 +1,15 @@
 import React, { useState, useContext } from "react";
 import "./Review.css";
-import { CourseContext } from "../../../State/courseContext";
+import { CourseContext } from "../../../../State/courseContext"
+import Like from "./Components/Like";
 
 export default function Review() {
   const [hideSeeMore, sethideSeeMore] = useState(false);
-  const [like, setLike] = useState({ isActive: false, id: 0 });
-  const [dislike, setdislike] = useState({ isActive: false, id: 0 });
 
   const course = useContext(CourseContext);
   const defaultReviewer = [];
   const hiddenReviewer = [];
 
-  function handleLike(type, id) {
-    if (type === "like") {
-      if(like.isActive){
-        setLike({ isActive: false, id: id });
-      }else {
-          setLike({ isActive: true, id: id });
-          setdislike({ isActive: false, id: id });
-      }
-    } else {
-      if(dislike.isActive){
-        setdislike({ isActive: false, id: id });
-      }else {
-          setdislike({ isActive: true, id: id });
-          setLike({ isActive: false, id: id });
-      }
-    }
-  }
   for (let i = 0; i < Math.min(5, course.reviews.length); i++) {
     defaultReviewer.push(course.reviews[i]);
   }
@@ -71,7 +53,7 @@ export default function Review() {
           </div>
 
           {defaultReviewer.map((reviewer) => (
-            <div className="row mt-5">
+            <div className="row mt-5" key={reviewer.id}>
               <div className="col-2">
                 <div className="review-img">
                   <span> {reviewer.reviewer.substring(0, 1)} </span>
@@ -94,20 +76,7 @@ export default function Review() {
                   Was this review Helpful ?
                 </span>
                 <div className="review-comment mt-2">
-                  <div onClick={() => handleLike("like", reviewer.id)}>
-                    {like.id === reviewer.id && like.isActive ? (
-                      <i className="fa fa-thumbs-up" aria-hidden="true"></i>
-                    ) : (
-                      <i className="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                    )}
-                  </div>
-                  <div onClick={() => handleLike("dislike", reviewer.id)}>
-                    {dislike.id === reviewer.id && dislike.isActive ? (
-                      <i className="fa fa-thumbs-down" aria-hidden="true"></i>
-                    ) : (
-                      <i className="fa fa-thumbs-o-down" aria-hidden="true"></i>
-                    )}
-                  </div>
+                    <Like />
                   <a className="review-report">Report</a>
                 </div>
               </div>
@@ -143,29 +112,7 @@ export default function Review() {
                       Was this review Helpful ?
                     </span>
                     <div className="review-comment mt-2">
-                      <div onClick={() => handleLike("like", reviewer.id)}>
-                        {like.id === reviewer.id && like.isActive ? (
-                          <i className="fa fa-thumbs-up" aria-hidden="true"></i>
-                        ) : (
-                          <i
-                            className="fa fa-thumbs-o-up"
-                            aria-hidden="true"
-                          ></i>
-                        )}
-                      </div>
-                      <div onClick={() => handleLike("dislike", reviewer.id)}>
-                        {dislike.id === reviewer.id && dislike.isActive ? (
-                          <i
-                            className="fa fa-thumbs-down"
-                            aria-hidden="true"
-                          ></i>
-                        ) : (
-                          <i
-                            className="fa fa-thumbs-o-down"
-                            aria-hidden="true"
-                          ></i>
-                        )}
-                      </div>
+                      <Like />
                       <a className="review-report">Report</a>
                     </div>
                   </div>
