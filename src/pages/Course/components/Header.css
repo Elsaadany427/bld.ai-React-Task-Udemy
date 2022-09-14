@@ -152,6 +152,12 @@ button[class^="header-button--"] {
     margin-bottom: 0;
 }
 
+@media (max-width: 380px) {
+    .header-price h1 {
+        font-size: clamp(2rem, calc(0.5rem + 1.51vw), 2.82rem);
+    }
+}
+
 .header-price span {
     font-size: clamp(1.6rem, calc(1.09rem + 0.09vw), 2rem);
 }
