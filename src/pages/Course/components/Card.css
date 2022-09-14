@@ -10,9 +10,15 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, .08), 0 4px 12px rgba(0, 0, 0, .08);
     display: block;
     position: absolute;
-    top: -23.8rem;
+    top: -35.8rem;
     max-width: 34rem;
     background: var(--clr-secondry);
+}
+
+@media (min-width:991px) and (max-width: 1199px) {
+    .single-card {
+        top: -29.8rem;
+    }
 }
 
 .single-card-img::after {
@@ -33,12 +39,14 @@
     opacity: 0;
     animation: sidebar-container 250ms linear 250ms forwards;
 }
-@media (max-width: 991px){
+
+@media (max-width: 991px) {
     .single-card {
         display: none;
     }
 }
-.single-card.scrolled .single-card-img{
+
+.single-card.scrolled .single-card-img {
     display: none;
 }
 
@@ -161,29 +169,36 @@ button[class^="single-card-button--"] {
 .single-card-button--love i {
     font-size: 2rem;
 }
+
 .single-card-button--buy {
     width: 100%;
     margin-top: 1rem;
 }
+
 .signle-card-include h4 {
     font-weight: bold;
 }
+
 .single-card-include-list {
     font-size: 1.6rem;
 }
+
 .single-card-links {
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-decoration: underline;
 }
+
 .single-card-links {
     margin-top: 1rem;
 }
+
 .single-card-links a {
     font-size: 1.4rem;
     font-weight: bold;
 }
+
 .single-card-button--business {
     margin-top: 2rem;
     width: 100%;
