@@ -3,7 +3,8 @@ import { useRef } from "react";
 import UdemyLogo from "../../assets/icons/logo-udemy.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
+import Home from "../../pages/Home";
 
 export default function Navbar() {
   const [open, setIsOpen] = useState(false);
@@ -27,26 +28,32 @@ export default function Navbar() {
         <div className="navbar__bar-icon navbar__bar-icon--icon-size-sm">
           <i className="fa fa-bars" onClick={() => setIsOpen(!open)}></i>
         </div>
-        <a  className="navbar__logo">
+        <Link to={"/"} className="navbar__logo">
           <img src={UdemyLogo} alt="logo udemy in mobile" />
-        </a>
+        </Link>
+        {/* <a  className="navbar__logo">
+         
+        </a> */}
         <ul className={`navbar__mobile-list ${open && "open"}`}>
           <li className="navbar__mobile-home">
-            <a >
+            <Link to={"/"}>
               <span> Home </span>
-            </a>
+            </Link>
           </li>
           <hr />
         </ul>
       </div>
       {/* Navbar in web browser */}
       <nav className="navbar__web-content d-flex align-items-center">
-        <a  className="navbar__logo">
+        <Link to={"/"} className="navbar__logo">
           <img src={UdemyLogo} alt="logo udemy in web" />
-        </a>
+        </Link>
+        {/* <a  className="navbar__logo">
+          <img src={UdemyLogo} alt="logo udemy in web" />
+        </a> */}
         <ul className="navbar__list">
           <li className="navbar__categories">
-            <a >
+            <a>
               <span> Categories </span>
             </a>
           </li>
@@ -68,17 +75,17 @@ export default function Navbar() {
             </form>
           </li>
           <li className="navbar__udemy-business">
-            <a >
+            <a>
               <span> Udemy Business </span>
             </a>
           </li>
           <li className="navbar__teach-udemy">
-            <a >
+            <a>
               <span> Teach on Udemy </span>
             </a>
           </li>
           <li className="navbar__auth-buttons d-flex align-items-center">
-            <a  className="navbar__btn--shopping">
+            <a className="navbar__btn--shopping">
               <i className="fa-solid fa-cart-shopping"></i>
             </a>
             <button className="btn btn-secondry btn-height">Login</button>
