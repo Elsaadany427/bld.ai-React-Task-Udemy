@@ -48,9 +48,9 @@ export default function Header(props) {
             <p className="header-authers">
               <span> Created by </span>
               <span className="header-authers-name">
-                <a href="#2">hatem,</a>
-                <a href="#2">hatem,</a>
-                <a href="#2">hatem</a>
+                <a href="javascript:void(0);">hatem,</a>
+                <a href="javascript:void(0);">hatem,</a>
+                <a href="javascript:void(0);">hatem</a>
               </span>
             </p>
             <div className="header-update">
