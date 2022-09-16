@@ -68,9 +68,9 @@ export default function Card() {
               </li>
             </ul>
             <div className="single-card-links">
-              <a href="#w">Share</a>
-              <a href="#w">Gift this course</a>
-              <a href="#w">Apply Coupon</a>
+              <a >Share</a>
+              <a >Gift this course</a>
+              <a >Apply Coupon</a>
             </div>
             <hr className="my-5" />
             <div className="single-card-training">

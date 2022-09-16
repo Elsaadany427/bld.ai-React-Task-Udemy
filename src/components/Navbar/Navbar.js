@@ -27,12 +27,12 @@ export default function Navbar() {
         <div className="navbar__bar-icon navbar__bar-icon--icon-size-sm">
           <i className="fa fa-bars" onClick={() => setIsOpen(!open)}></i>
         </div>
-        <a href="/" className="navbar__logo">
+        <a  className="navbar__logo">
           <img src={UdemyLogo} alt="logo udemy in mobile" />
         </a>
         <ul className={`navbar__mobile-list ${open && "open"}`}>
           <li className="navbar__mobile-home">
-            <a href="/">
+            <a >
               <span> Home </span>
             </a>
           </li>
@@ -41,12 +41,12 @@ export default function Navbar() {
       </div>
       {/* Navbar in web browser */}
       <nav className="navbar__web-content d-flex align-items-center">
-        <a href="/" className="navbar__logo">
+        <a  className="navbar__logo">
           <img src={UdemyLogo} alt="logo udemy in web" />
         </a>
         <ul className="navbar__list">
           <li className="navbar__categories">
-            <a href="#s">
+            <a >
               <span> Categories </span>
             </a>
           </li>
@@ -68,17 +68,17 @@ export default function Navbar() {
             </form>
           </li>
           <li className="navbar__udemy-business">
-            <a href="#d">
+            <a >
               <span> Udemy Business </span>
             </a>
           </li>
           <li className="navbar__teach-udemy">
-            <a href="#d">
+            <a >
               <span> Teach on Udemy </span>
             </a>
           </li>
           <li className="navbar__auth-buttons d-flex align-items-center">
-            <a href="#d" className="navbar__btn--shopping">
+            <a  className="navbar__btn--shopping">
               <i className="fa-solid fa-cart-shopping"></i>
             </a>
             <button className="btn btn-secondry btn-height">Login</button>

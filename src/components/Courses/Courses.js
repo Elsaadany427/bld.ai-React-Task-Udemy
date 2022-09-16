@@ -137,7 +137,7 @@ export default function Courses(props) {
                 <span className="placeholder col-6"></span>
               </p>
               <a
-                href="#x"
+                
                 tabIndex="-1"
                 className="btn btn-primary disabled placeholder col-4"
                 aria-hidden="true"

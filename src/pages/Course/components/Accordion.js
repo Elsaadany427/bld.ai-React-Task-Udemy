@@ -96,11 +96,11 @@ export default function Accordion() {
                                     className="d-flex"
                                     style={{ width: "100%" }}
                                   >
-                                    <a href="#2">{lesson.title}</a>
+                                    <a >{lesson.title}</a>
 
                                     <span className="ms-auto accordion-body-content-time">
                                       {lesson.is_preview ? (
-                                        <a href="#2" className="me-4">
+                                        <a  className="me-4">
                                           Preview
                                         </a>
                                       ) : null}
@@ -166,11 +166,11 @@ export default function Accordion() {
                                       className="d-flex"
                                       style={{ width: "100%" }}
                                     >
-                                      <a href="#2">{lesson.title}</a>
+                                      <a >{lesson.title}</a>
 
                                       <span className="ms-auto accordion-body-content-time">
                                         {lesson.is_preview ? (
-                                          <a href="#2" className="me-4">
+                                          <a  className="me-4">
                                             Preview
                                           </a>
                                         ) : null}

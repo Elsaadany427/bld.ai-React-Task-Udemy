@@ -30,7 +30,7 @@ export default function NavOverride() {
           </span>
           <span className="navOverride-rate-total">
             {" "}
-            <a href="#w">({course.rate_num} ratings)</a>{" "}
+            <a >({course.rate_num} ratings)</a>{" "}
           </span>
           <span className="navOverride-rate-students">
             {course.students} students{" "}
