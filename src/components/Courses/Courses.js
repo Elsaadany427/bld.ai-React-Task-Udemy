@@ -34,9 +34,9 @@ export default function Courses(props) {
   // Fetch tabs
   useEffect(() => {
     axios
-      .get("https://62f965f63eab3503d1e45e85.mockapi.io/tabs")
+      .get("http://localhost:4000/tabs")
       .then((data) => {
-        setTabs(data.data[0]);
+        setTabs(data.data);
       })
       .catch((err) => {
         console.log(err);
@@ -83,7 +83,7 @@ export default function Courses(props) {
     setSearchParams({ search: tab });
     setLoading(true);
     axios
-      .get(`http://localhost:4200/courses?category=${tab}`)
+      .get(`http://localhost:4000/courses?category=${tab}`)
       .then((data) => {
         setTimeout(() => {
           setLoading(false);
