@@ -18,7 +18,7 @@ export default function NavOverride() {
   return (
     <div className={`navOverride ${scroll ? "scrolled" : ""}`}>
       <div className="navOverride-title">
-        <h3> {course.title} </h3>
+        <h3> {course.title}  </h3>
         <span className="navOverride-rate">
           <span className="navOverride-rate-number">{course.starRate}</span>
           <span className="navOverride-rate-stars">
