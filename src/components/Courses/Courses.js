@@ -68,15 +68,6 @@ export default function Courses(props) {
     return arr.join(" ");;
   }
 
-  // To capitalize 
-  function resetCapitalize(tab){
-    const arr = tab.split(" ");
-    for (var i = 0; i < arr.length; i++) {
-      arr[i] = arr[i].charAt(0).toLowerCase() + arr[i].slice(1);
-    }
-    return arr.join(" ");;
-  }
-
   // Handle Courses when tab clicked
   function handleCourses(tab) {
     tab = capitalize(tab);
@@ -88,9 +79,7 @@ export default function Courses(props) {
         setTimeout(() => {
           setLoading(false);
         }, 500);
-
-       tab = resetCapitalize(tab)
-
+      tab = tab.toLowerCase();
         setcurrentTab({
           tabName: tab,
           opportunities: Tabs[tab].opportunities,
