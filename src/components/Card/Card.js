@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import Course from "../../pages/Course/Course";
 
 export default function Card(props) {
-  const { image, title, auther, starRate, students, price } = props.CardData;
-
+  const { id, image, title, auther, starRate, students, price } = props.CardData;
     return (
       <>
         <div
@@ -14,7 +13,7 @@ export default function Card(props) {
             <img src={`${image}`} alt={image} />
           </div>
           <h3>
-            <Link to={"/course"} state={props.CardData} > {title} </Link>
+            <Link to={`/course/${id}`} state={props.CardData} > {title} </Link>
           </h3>
           <div>
             <span> {auther} </span>
