@@ -1,7 +1,5 @@
 import React from "react";
-import Header from "../components/Header/Header";
-import Courses from "../components/Courses/Courses";
-import Categories from "../components/Categories/Categories";
+import {Header, Courses, Categories}  from '../components/index' 
 
 export default function Home() {
   return (

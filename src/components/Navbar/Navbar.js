@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useRef } from "react";
 import UdemyLogo from "../../assets/icons/logo-udemy.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Link, useSearchParams } from "react-router-dom";
-import Home from "../../pages/Home";
 
 export default function Navbar() {
   const [open, setIsOpen] = useState(false);
@@ -31,9 +30,6 @@ export default function Navbar() {
         <Link to={"/"} className="navbar__logo">
           <img src={UdemyLogo} alt="logo udemy in mobile" />
         </Link>
-        {/* <a  className="navbar__logo">
-         
-        </a> */}
         <ul className={`navbar__mobile-list ${open && "open"}`}>
           <li className="navbar__mobile-home">
             <Link to={"/"}>
@@ -48,9 +44,6 @@ export default function Navbar() {
         <Link to={"/"} className="navbar__logo">
           <img src={UdemyLogo} alt="logo udemy in web" />
         </Link>
-        {/* <a  className="navbar__logo">
-          <img src={UdemyLogo} alt="logo udemy in web" />
-        </a> */}
         <ul className="navbar__list">
           <li className="navbar__categories">
             <a>

@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Course from "../../pages/Course/Course";
 
 export default function Card(props) {
   const { id, image, title, auther, starRate, students, price } = props.CardData;

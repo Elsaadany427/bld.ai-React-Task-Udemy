@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-// import { CategoryData } from "/Database/CategoryData";
-import Category from "../../components/Category/Category";
+import Category from "../Category/Category";
 
 export default function Categories() {
   const [categoriesData, setCategoriesData] = useState([]);
