@@ -5,9 +5,8 @@ import "./App.css";
 // React imports
 import React from "react";
 // Components
-import Navbar from "./components/Navbar/Navbar";
-import Home from "./pages/Home";
-import Course from "./pages/Course/Course"
+import {Navbar, NotFounded} from "./components/index";
+import {Home, Course} from "./pages/index";
 
 function App() {
   return (
@@ -16,7 +15,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/course" element={<Course />} />
+          <Route path="/course/:courseId" element={<Course />} />
+          <Route path="*" element={<NotFounded />} />
         </Routes>
       </Router>
     </div>

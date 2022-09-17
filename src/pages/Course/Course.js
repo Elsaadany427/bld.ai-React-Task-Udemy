@@ -1,16 +1,18 @@
 import React from "react";
-import Header from "./components/Header";
-import Learn from "./components/Learn";
-import Accordion from "./components/Accordion";
-import Requirements from "./components/Requirements";
-import Description from "./components/Description";
-import Instructors from "./components/Instructors";
-import Feedback from "./components/Feedback";
-import Review from "./components/Review/Review";
-import Card from "./components/Card";
 import { useLocation } from "react-router-dom";
-import { CourseProvider } from "../../State/courseContext";
-import NavOverride from "./components/NavOverride";
+import { CourseProvider } from "../../Context/courseContext";
+import {
+  Header,
+  Learn,
+  Accordion,
+  Requirements,
+  Description,
+  Instructors,
+  Feedback,
+  Review,
+  Card,
+  NavOverride,
+} from "./components/index";
 
 export default function Course() {
   const location = useLocation();
@@ -21,7 +23,7 @@ export default function Course() {
       <CourseProvider value={course}>
         <NavOverride />
         <section className="course">
-          <Header course={course}/>
+          <Header course={course} />
           <div className="container">
             <div className="row">
               <div className="col-lg-8">

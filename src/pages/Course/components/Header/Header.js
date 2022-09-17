@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { CourseContext } from "../../../State/courseContext";
+import { CourseContext } from "../../../../Context/courseContext";
 
 import "./Header.css";
-import Breadcrumb from "./Breadcrumb";
+import Breadcrumb from "../Breadcrumb/Breadcrumb";
 
 export default function Header(props) {
   const { image } = props.course;
@@ -39,7 +39,7 @@ export default function Header(props) {
               </span>
               <span className="header-rate-total">
                 {" "}
-                <a href="#w">({course.rate_num} ratings)</a>{" "}
+                <a >({course.rate_num} ratings)</a>{" "}
               </span>
               <span className="header-rate-students">
                 {course.students} students{" "}
@@ -48,9 +48,9 @@ export default function Header(props) {
             <p className="header-authers">
               <span> Created by </span>
               <span className="header-authers-name">
-                <a href="#2">hatem,</a>
-                <a href="#2">hatem,</a>
-                <a href="#2">hatem</a>
+                <a>hatem,</a>
+                <a>hatem,</a>
+                <a>hatem</a>
               </span>
             </p>
             <div className="header-update">
@@ -89,9 +89,9 @@ export default function Header(props) {
               </div>
 
               <div className="header-links d-flex d-lg-none">
-                <a href="#w">Share</a>
-                <a href="#w">Gift this course</a>
-                <a href="#w">Apply Coupon</a>
+                <a >Share</a>
+                <a >Gift this course</a>
+                <a >Apply Coupon</a>
               </div>
             </div>
           </div>

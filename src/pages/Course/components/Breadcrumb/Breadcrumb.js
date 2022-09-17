@@ -7,10 +7,10 @@ export default function Breadcrumb() {
         <nav aria-label="breadcrumb">
           <ol className="breadcrumb">
             <li className="breadcrumb-item">
-              <a href="#">Home</a>
+              <a >Home</a>
             </li>
             <li className="breadcrumb-item">
-              <a href="#">Library</a>
+              <a >Library</a>
             </li>
             <li className="breadcrumb-item active" aria-current="page">
               Data

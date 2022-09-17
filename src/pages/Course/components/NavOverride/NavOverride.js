@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { CourseContext } from "../../../State/courseContext";
+import { CourseContext } from "../../../../Context/courseContext";
 import "./NavOverride.css";
 
 export default function NavOverride() {
@@ -18,7 +18,7 @@ export default function NavOverride() {
   return (
     <div className={`navOverride ${scroll ? "scrolled" : ""}`}>
       <div className="navOverride-title">
-        <h3> Complete Python Developer in 2022: Zero to Mastery </h3>
+        <h3> {course.title}  </h3>
         <span className="navOverride-rate">
           <span className="navOverride-rate-number">{course.starRate}</span>
           <span className="navOverride-rate-stars">
@@ -30,7 +30,7 @@ export default function NavOverride() {
           </span>
           <span className="navOverride-rate-total">
             {" "}
-            <a href="#w">({course.rate_num} ratings)</a>{" "}
+            <a >({course.rate_num} ratings)</a>{" "}
           </span>
           <span className="navOverride-rate-students">
             {course.students} students{" "}

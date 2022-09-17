@@ -5162,5 +5162,47 @@
       "desc": "Take one of Udemy’s range of web development courses and learn how to code using this incredibly useful language. Its simple syntax and readability makes Python perfect for Flask, Django, data science, and machine learning. You’ll learn how to build everything from games to sites to apps. Choose from a range of courses that will appeal to both beginners and advanced developers alike.."
     }
   },
-  "categories": ["python", "excel", "web development"]
+  "categories": ["python", "excel", "web development"],
+  "CategoryData": [
+    {
+      "id": 1,
+      "name": "Design",
+      "image": "lohp-category-design-v2.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Development",
+      "image": "lohp-category-business-v2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Marketing",
+      "image": "lohp-category-marketing-v2.jpg"
+    },
+    {
+      "id": 4,
+      "name": "IT and Software",
+      "image": "lohp-category-it-and-software-v2.jpg"
+    },
+    {
+      "id": 5,
+      "name": " Personal Development",
+      "image": "lohp-category-personal-development-v2.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Business",
+      "image": "lohp-category-business-v2.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Photography",
+      "image": "lohp-category-photography-v2.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Music",
+      "image": "lohp-category-music-v2.jpg"
+    }
+  ]
 }

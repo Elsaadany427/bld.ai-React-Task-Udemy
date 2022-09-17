@@ -1,15 +1,29 @@
-import React from "react";
-import { CategoryData } from "../../Database/CategoryData";
-import Category from "../../components/Category/Category";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import Category from "../Category/Category";
 
-export default function Categories(props) {
+export default function Categories() {
+  const [categoriesData, setCategoriesData] = useState([]);
+  // Fetch tabs
+  useEffect(() => {
+    axios
+      .get("http://localhost:4000/CategoryData")
+      .then((data) => {
+        setCategoriesData(data.data);
+
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+  
   return (
     <div className="categories container">
       <div className="categories-title">
         <h2>Top categories</h2>
       </div>
       <div className="row">
-        {CategoryData.map((categoty) => (
+        {categoriesData.map((categoty) => (
           <Category key={categoty.id} CategoryDate={categoty} />
         ))}
       </div>

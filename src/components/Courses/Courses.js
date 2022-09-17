@@ -1,11 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Card from "../Card/Card";
 import axios from "axios";
 import { SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
-import PlaceholderCard from "../PlaceholderCard/PlaceholderCard";
-import CustemSwiper from "../Swiper/Swiper";
+import { CustemSwiper, PlaceholderCard, Card } from "../index";
+
 import { useSearchParams } from "react-router-dom";
 
 export default function Courses(props) {
@@ -34,9 +33,9 @@ export default function Courses(props) {
   // Fetch tabs
   useEffect(() => {
     axios
-      .get("https://62f965f63eab3503d1e45e85.mockapi.io/tabs")
+      .get("http://localhost:4000/tabs")
       .then((data) => {
-        setTabs(data.data[0]);
+        setTabs(data.data);
       })
       .catch((err) => {
         console.log(err);
@@ -58,23 +57,13 @@ export default function Courses(props) {
     setSearchCourses(filteredProducts);
   }, [search]);
 
-
-  // To capitalize 
-  function capitalize(tab){
+  // To capitalize
+  function capitalize(tab) {
     const arr = tab.split(" ");
     for (var i = 0; i < arr.length; i++) {
       arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
     }
-    return arr.join(" ");;
-  }
-
-  // To capitalize 
-  function resetCapitalize(tab){
-    const arr = tab.split(" ");
-    for (var i = 0; i < arr.length; i++) {
-      arr[i] = arr[i].charAt(0).toLowerCase() + arr[i].slice(1);
-    }
-    return arr.join(" ");;
+    return arr.join(" ");
   }
 
   // Handle Courses when tab clicked
@@ -83,14 +72,12 @@ export default function Courses(props) {
     setSearchParams({ search: tab });
     setLoading(true);
     axios
-      .get(`http://localhost:4200/courses?category=${tab}`)
+      .get(`http://localhost:4000/courses?category=${tab}`)
       .then((data) => {
         setTimeout(() => {
           setLoading(false);
         }, 500);
-
-       tab = resetCapitalize(tab)
-
+        tab = tab.toLowerCase();
         setcurrentTab({
           tabName: tab,
           opportunities: Tabs[tab].opportunities,
@@ -137,7 +124,6 @@ export default function Courses(props) {
                 <span className="placeholder col-6"></span>
               </p>
               <a
-                href="#x"
                 tabIndex="-1"
                 className="btn btn-primary disabled placeholder col-4"
                 aria-hidden="true"

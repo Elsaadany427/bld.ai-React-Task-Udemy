@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import "./Review.css";
-import { CourseContext } from "../../../../State/courseContext"
-import Like from "./Components/Like";
+import { CourseContext } from "../../../../Context/courseContext"
+import Like from "./Like/Like";
 
 export default function Review() {
   const [hideSeeMore, sethideSeeMore] = useState(false);
