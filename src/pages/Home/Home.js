@@ -1,5 +1,5 @@
 import React from "react";
-import {Header, Courses, Categories}  from '../components/index' 
+import {Header, Courses, Categories}  from '../../components/index' 
 
 export default function Home() {
   return (

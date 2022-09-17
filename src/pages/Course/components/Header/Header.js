@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { CourseContext } from "../../../State/courseContext";
+import { CourseContext } from "../../../../Context/courseContext";
 
 import "./Header.css";
-import Breadcrumb from "./Breadcrumb";
+import Breadcrumb from "../Breadcrumb/Breadcrumb";
 
 export default function Header(props) {
   const { image } = props.course;

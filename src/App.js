@@ -5,9 +5,8 @@ import "./App.css";
 // React imports
 import React from "react";
 // Components
-import Navbar from "./components/Navbar/Navbar";
-import Home from "./pages/Home";
-import Course from "./pages/Course/Course"
+import {Navbar} from "./components/index";
+import {Home, Course} from "./pages/index";
 
 function App() {
   return (

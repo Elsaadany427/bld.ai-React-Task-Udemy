@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { CourseContext } from "../../../State/courseContext";
+import { CourseContext } from "../../../../Context/courseContext";
 import "./NavOverride.css";
 
 export default function NavOverride() {

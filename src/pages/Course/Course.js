@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { CourseProvider } from "../../State/courseContext";
+import { CourseProvider } from "../../Context/courseContext";
 import {
   Header,
   Learn,

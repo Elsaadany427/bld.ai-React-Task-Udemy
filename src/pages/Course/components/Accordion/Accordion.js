@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import "./Accordion.css";
-import { CourseContext } from "../../../State/courseContext";
+import { CourseContext } from "../../../../Context/courseContext";
 
 export default function Accordion() {
   const [open, setOpen] = useState({ isActive: false, idx: null });

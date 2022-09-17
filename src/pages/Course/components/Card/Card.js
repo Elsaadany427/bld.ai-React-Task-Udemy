@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./Card.css";
-import { CourseContext } from "../../../State/courseContext";
+import { CourseContext } from "../../../../Context/courseContext";
 
 export default function Card() {
   const [scroll, setScroll] = useState(null);

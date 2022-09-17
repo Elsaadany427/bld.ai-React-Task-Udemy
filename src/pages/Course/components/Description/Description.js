@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { CourseContext } from "../../../State/courseContext";
+import { CourseContext } from "../../../../Context/courseContext";
 import "./Description.css";
 
 export default function Description() {
