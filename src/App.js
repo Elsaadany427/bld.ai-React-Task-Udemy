@@ -5,7 +5,7 @@ import "./App.css";
 // React imports
 import React from "react";
 // Components
-import {Navbar} from "./components/index";
+import {Navbar, NotFounded} from "./components/index";
 import {Home, Course} from "./pages/index";
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/course/:courseId" element={<Course />} />
+          <Route path="*" element={<NotFounded />} />
         </Routes>
       </Router>
     </div>

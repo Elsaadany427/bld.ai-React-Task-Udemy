@@ -6,5 +6,15 @@ import Header from "./Header/Header";
 import Navbar from "./Navbar/Navbar";
 import PlaceholderCard from "./PlaceholderCard/PlaceholderCard";
 import CustemSwiper from "./Swiper/Swiper";
-
-export {Card, Categories, Category, Courses, Header, Navbar, PlaceholderCard, CustemSwiper};
+import NotFounded from "./NotFounded/NotFounded";
+export {
+  Card,
+  Categories,
+  Category,
+  Courses,
+  Header,
+  Navbar,
+  PlaceholderCard,
+  CustemSwiper,
+  NotFounded,
+};
